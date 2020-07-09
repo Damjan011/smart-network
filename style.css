@@ -1,0 +1,104 @@
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 0.1px;
+    color: #555;
+}
+
+h3,
+h1,
+p {
+    margin: 0;
+}
+
+.vertical-menu a {
+    background-color: white;
+    color: #444444;
+    display: block;
+    text-decoration: none;
+    padding-left: 16px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-right: 16px;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    height: 20px;
+}
+
+.vertical-menu img {
+    margin-right: 10px;
+    width: 19px;
+}
+
+.vertical-menu a:hover {
+    background-color: #ccc;
+    /* Dark grey background on mouse-over */
+}
+
+.vertical-menu a.active {
+    background-color: #eeeeee;
+    color: black;
+    border-right: 3px solid blue;
+}
+
+.vertical-menu-right a {
+    background-color: white;
+    /* Grey background color */
+    color: #444444;
+    /* Black text color */
+    display: block;
+    /* Make the links appear below each other */
+    /* Add some padding */
+    text-decoration: none;
+    /* Remove underline from links */
+    padding-left: 16px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 16px;
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #f0f0f0;
+    font-weight: 600;
+}
+
+.vertical-menu-right p:nth-child(2) {
+    color: #8b8b8b;
+    text-align: right;
+}
+
+.vertical-menu-right p:first-of-type {
+    text-align: left;
+}
+
+.support-info {
+    padding-left: 16px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 16px;
+    font-size: 13px;
+    border-bottom: 1px solid #f0f0f0;
+    font-weight: 600;
+}
+
+.ui-box {
+    background: white;
+    border: 1px solid #f0f0f0;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 8px;
+    border-collapse: collapse;
+}
+
+.ui-icon-box {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding-left: 17px;
+    padding-top: 17px;
+    padding-bottom: 9px;
+}
