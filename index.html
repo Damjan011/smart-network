@@ -6,17 +6,13 @@
 </head>
 
 <body>
-
-    <div style="display:flex">
-
+    <div class="ui-layout">
         <div class="ui-side-menu">
-
             <div class="ui-logo-box">
                 <img class="ui-logo-small" src="img/Group.png">
-                <p>Smart Network</p>
+                <p class="ui-logo-label">Smart Network</p>
             </div>
-
-            <div style="margin-bottom: 20px" class="vertical-menu">
+            <div class="ui-vertical-menu ui-menu-spacing">
                 <a href="#" class="active"><img src="img/Shape-3.png">Subscribers</a>
                 <a href="#"><img src="img/Shape-4.png">Networks</a>
                 <a href="#"><img src="img/Shape-5.png">ISP Plans</a>
@@ -24,83 +20,59 @@
                 <a href="#"><img src="img/Shape-2.png">Task Manager</a>
                 <a href="#"><img src="img/Shape-6.png">Preferences</a>
             </div>
-
-            <div class="vertical-menu">
-                <p style="border-bottom: 1px solid #f0f0f0;padding-left: 16px;padding-bottom: 8px; color: #8b8b8b;font-size: 11px; font-weight: 600">SYSTEM</p>
+            <div class="ui-vertical-menu">
+                <p class="ui-menu-label">SYSTEM</p>
                 <a href="#"><img src="img/Shape-7.png">Organizations</a>
                 <a href="#"><img src="img/Shape-8.png">Admins</a>
                 <a href="#"><img src="img/Shape.png">Support</a>
             </div>
-
-
         </div>
-
-
-
-        <div style="background:#fafafa; width: 100%">
-            <div style="border-bottom: 1px solid #f0f0f0; height:80px;display:flex;align-items:center;justify-content: space-between; padding-left: 16px; padding-right: 16px">
-                <p style="font-weight: 600; color:#6779ff; font-size: 17px">John Miller</p>
-                <p style="font-weight: 600;font-size: 17px">Miller-40242</p>
-                <div style="display:flex;align-items: center;width: 100px; justify-content: space-between;">
-                    <img style="background: #5f72ff; padding: 4px 7px 2px 7px;border-radius: 10px" src="img/pin.png">
+        <!-- CENTER TOP HEADER AND BOXES -->
+        <div class="ui-top-content">
+            <div class="ui-top-header">
+                <p class="ui-name-label">John Miller</p>
+                <p class="ui-main-label">Miller-40242</p>
+                <div class="ui-header-icons">
+                    <img class="header-icons-active" src="img/pin.png">
                     <img src="img/slider.png">
                     <img src="img/dots.png">
                 </div>
-
             </div>
-
             <div class="ui-top-boxes">
-
-
                 <div class="ui-box ui-icon-box">
                     <div class="ui-box-image-wrapper">
                         <img class="ui-img-fix" src="img/user.png">
                     </div>
                     <div>
                         <p>Subscriber</p>
-                        <p style="margin-top: 13px;font-size: 11px;color:gray">John Miller</p>
+                        <p>John Miller</p>
                         <img class="ui-arrow" src="damjan">
                     </div>
-
                 </div>
-
                 <div class="ui-box ui-icon-box">
                     <div class="ui-box-image-wrapper">
                         <img src="img/Group.png">
                     </div>
                     <div>
                         <p>Traffic</p>
-                        <p style="margin-top: 13px;font-size: 11px;color:gray">4 services active</p>
+                        <p>4 services active</p>
                         <img class="ui-arrow" src="damjan">
                     </div>
-
                 </div>
-
                 <div class="ui-box ui-icon-box">
                     <div class="ui-box-image-wrapper">
                         <img src="img/Group 72.png">
                     </div>
                     <div>
                         <p>Speedtest</p>
-                        <p style="margin-top: 13px;font-size: 11px;color:gray">Last speedtest: Monday 01/02 @ 12:35 PM</p>
+                        <p>Last speedtest: Monday 01/02 @ 12:35 PM</p>
                         <img class="ui-arrow" src="damjan">
                     </div>
                 </div>
-
-
-
-
-
-
-
             </div>
-
+            <!-- CENTER BOXES -->
             <div class="ui-center-content">
-
-
-
-
-                <div id="utilization" style="margin-bottom: 16px; padding-left: 35px; padding-top: 16px; padding-bottom: 16px; padding-right: 35px; display: flex; justify-content: space-between" class="ui-box">
+                <div id="utilization" style="padding-left: 35px; padding-top: 16px; padding-bottom: 16px; padding-right: 35px; display: flex; justify-content: space-between" class="ui-box">
                     <div style="display:flex; flex-direction:column;width: 50%">
                         <div style="display:flex;justify-content: space-between;">
                             <p>JUNE UTILIZATION</p>
@@ -111,18 +83,23 @@
                             <div style="height: 30px; width: 3px; background: black"></div>
                         </div>
                     </div>
-
-
-
-
                     <div style="display:flex; width: 50%;flex-direction:column;align-items: flex-end">
-
                         <div style="display:flex">
                             <img src="damjan">
                             <p>21.4 Mb/s</p>
-
                             <div class="meter damjan" style="display:flex;overflow: hidden; border: 1px solid #e8e4e4; width: 140px">
-
+                                <span class="progress" style="width: 80%;background:transparent;display:flex;align-items:center;font-size: 9px; font-weight: 600; color: #8b8b8b">
+                                <p style="position:relative; left: 43px">1</p>
+                                <p style="position:relative; left: 84px">5</p>
+                                <p style="position:relative; left: 117px">20</p>
+                            </span>
+                                <span class="novidiv" style="background: white; width: 20%;position: initial;border-radius: unset"></span>
+                            </div>
+                        </div>
+                        <div style="display:flex">
+                            <img src="damjan">
+                            <p>21.4 Mb/s</p>
+                            <div class="meter damjan" style="display:flex;overflow: hidden; border: 1px solid #e8e4e4; width: 140px">
                                 <span class="progress" style="border-top-right-radius: 8px;width: 80%;background:transparent;display:flex;align-items:center;font-size: 9px; font-weight: 600; color: #8b8b8b">
                                 <p style="position:relative; left: 43px">1</p>
                                 <p style="position:relative; left: 84px">5</p>
@@ -130,98 +107,41 @@
                             </span>
                                 <span class="novidiv" style="background: white; width: 20%;position: initial;border-radius: unset"></span>
                             </div>
-
                         </div>
-
-
-                        <div style="display:flex">
-
-                            <img src="damjan">
-                            <p>21.4 Mb/s</p>
-
-                            <div class="meter damjan" style="display:flex;overflow: hidden; border: 1px solid #e8e4e4; width: 140px">
-
-                                <span class="progress" style="border-top-right-radius: 8px;width: 80%;background:transparent;display:flex;align-items:center;font-size: 9px; font-weight: 600; color: #8b8b8b">
-                                <p style="position:relative; left: 43px">1</p>
-                                <p style="position:relative; left: 84px">5</p>
-                                <p style="position:relative; left: 117px">20</p>
-                            </span>
-                                <span class="novidiv" style="background: white; width: 20%;position: initial;border-radius: unset"></span>
-                            </div>
-
-                        </div>
-
                     </div>
-
-
-
-
-
-
-
-
-
                 </div>
 
-                <div id="info-bars" style="margin-bottom: 16px; padding-left: 20px; padding-top: 16px; padding-bottom: 16px; padding-right: 20px; display: flex; justify-content: space-between" class="ui-box">
-
+                <div id="info-bars" style="padding-left: 20px; padding-top: 16px; padding-bottom: 16px; padding-right: 20px; display: flex; justify-content: space-between" class="ui-box">
                     <div style="height: 53px;position: relative;display: flex;flex-direction: column; justify-content: space-between;">
                         <p style="font-size: 9px; width: 85px; font-weight: 600;color: #8b8b8b;">OVERALL INTERNET HEALTH</p>
                         <div style="display: flex;align-items: center">
                             <img style="height: 22px; margin-right: 8px" src="img/smiley.png">
-
                             <div class="ui-bar-green">
-
                             </div>
-
                             <div class="ui-bar-green">
-
                             </div>
-
                             <div class="ui-bar-green">
-
                             </div>
-
                             <div class="ui-bar-green">
-
                             </div>
-
                             <div class="ui-bar-green">
-
                             </div>
-
                             <div class="ui-bar-green">
-
                             </div>
-
                             <div class="ui-bar-green">
-
                             </div>
-
                             <div class="ui-bar-green">
-
                             </div>
-
                             <div class="ui-bar-green">
-
                             </div>
-
                             <div class="ui-bar-green">
-
                             </div>
-
                             <div class="ui-bar-green">
-
                             </div>
-
                             <div class="ui-bar-green">
-
                             </div>
                         </div>
                     </div>
-
-
-
                     <div style="height: 53px;position: relative;display: flex;flex-direction: column; justify-content: space-between;">
                         <p style="font-size: 9px; width: 85px; font-weight: 600;color: #8b8b8b;">SHORT TERM PACKET LOSS</p>
                         <div style="display: flex; justify-content: space-between; width: 84px; font-size: 9px; font-weight: 600; color: #8b8b8b; position:absolute; top: 22px">
@@ -229,66 +149,32 @@
                             <p>0%</p>
                         </div>
                         <div style="display: flex;align-items: center;height:22px">
-
-
                             <div class="ui-bar-green">
-
                             </div>
-
                             <div class="ui-bar-green">
-
                             </div>
-
                             <div class="ui-bar-green">
-
                             </div>
-
                             <div class="ui-bar-green">
-
                             </div>
-
                             <div class="ui-bar-green">
-
                             </div>
-
                             <div class="ui-bar-green">
-
                             </div>
-
                             <div class="ui-bar-green">
-
                             </div>
-
                             <div class="ui-bar-green">
-
                             </div>
-
                             <div class="ui-bar-green">
-
                             </div>
-
                             <div class="ui-bar-green">
-
                             </div>
-
                             <div class="ui-bar-green">
-
                             </div>
-
                             <div class="ui-bar-green">
-
                             </div>
                         </div>
                     </div>
-
-
-
-
-
-
-
-
-
                     <div style="height: 53px;position: relative;display: flex;flex-direction: column; justify-content: space-between;">
                         <p style="font-size: 9px; width: 85px; font-weight: 600;color: #8b8b8b;">LONG TERM PACKET LOSS</p>
                         <div style="display: flex; justify-content: space-between; font-weight: 600; color: #8b8b8b; width: 84px; font-size: 9px; position:absolute; top: 22px">
@@ -296,61 +182,32 @@
                             <p>0%</p>
                         </div>
                         <div style="display: flex;align-items: center;height:22px">
-
-
                             <div class="ui-bar-green">
-
                             </div>
-
                             <div class="ui-bar-green">
-
                             </div>
-
                             <div class="ui-bar-green">
-
                             </div>
-
                             <div class="ui-bar-green">
-
                             </div>
-
                             <div class="ui-bar-green">
-
                             </div>
-
                             <div class="ui-bar-green">
-
                             </div>
-
                             <div class="ui-bar-green">
-
                             </div>
-
                             <div class="ui-bar-green">
-
                             </div>
-
                             <div class="ui-bar-green">
-
                             </div>
-
                             <div class="ui-bar-green">
-
                             </div>
-
                             <div class="ui-bar-green">
-
                             </div>
-
                             <div class="ui-bar-green">
-
                             </div>
                         </div>
                     </div>
-
-
-
-
                     <div style="height: 53px;position: relative;display: flex;flex-direction: column; justify-content: space-between;">
                         <p style="font-size: 9px; width: 85px; font-weight: 600;color: #8b8b8b;">LATENCY</p>
                         <div style="display: flex; justify-content: space-between; width: 84px; font-size: 9px; color: #8b8b8b; font-weight: 600; position:absolute; top: 22px">
@@ -358,131 +215,69 @@
                             <p>20 ms</p>
                         </div>
                         <div style="display: flex;align-items: center;height:22px">
-
-
                             <div class="ui-bar-orange">
-
                             </div>
-
                             <div class="ui-bar-orange">
-
                             </div>
-
                             <div class="ui-bar-orange">
-
                             </div>
-
                             <div class="ui-bar-orange">
-
                             </div>
-
                             <div class="ui-bar-orange">
-
                             </div>
-
                             <div class="ui-bar-orange">
-
                             </div>
-
                             <div class="ui-bar-orange">
-
                             </div>
-
                             <div class="ui-bar-orange">
-
                             </div>
-
                             <div class="ui-bar-orange">
-
                             </div>
-
                             <div class="ui-bar-orange-empty">
-
                             </div>
-
                             <div class="ui-bar-orange-empty">
-
                             </div>
-
                             <div class="ui-bar-orange-empty">
-
                             </div>
                         </div>
                     </div>
-
-
                     <div style="height: 53px;position: relative;display: flex;flex-direction: column; justify-content: space-between;">
                         <div style="display: flex; align-items: center">
                             <div style="width: 12px; height: 12px; background: #ff3563;border-radius: 50%; margin-right: 5px">
-
                             </div>
                             <p style="font-size: 9px; font-weight: 600; color: #8b8b8b">MTU</p>
                         </div>
-
                         <div style="display: flex; align-items: center">
                             <div style="width: 12px; height: 12px; background: #ff3563;border-radius: 50%; margin-right: 5px">
-
                             </div>
                             <p style="font-size: 9px; font-weight: 600; color: #8b8b8b">DNS 1</p>
                         </div>
-
                         <div style="display: flex; align-items: center">
                             <div style="width: 12px; height: 12px; background: #6ee294;border-radius: 50%; margin-right: 5px">
-
                             </div>
                             <p style="font-size: 9px; font-weight: 600; color: #8b8b8b">DNS 2</p>
                         </div>
                     </div>
-
-
-
-
-
-
-
-
-
                 </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                <div id="bandwidth-usage" style="height: 80px;margin-bottom: 16px" class="ui-box">
+                <div id="bandwidth-usage" style="height: 80px" class="ui-box">
                     <h1>Bandwidth usage Graph</h1>
                 </div>
 
-                <div id="data-transfer" style="height: 80px;margin-bottom: 16px" class="ui-box">
+                <div id="data-transfer" style="height: 80px" class="ui-box">
                     <h1>Data transfer Graph</h1>
                 </div>
 
-                <div id="health" style="height: 80px;margin-bottom: 16px" class="ui-box">
+                <div id="health" style="height: 80px" class="ui-box">
                     <h1>Health Graph</h1>
                 </div>
 
-
-
-                <div id="map" class="ui-box" style="margin-bottom: 16px">
+                <div id="map" class="ui-box">
                     <iframe style="width: 100%; height: 30vh" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d22658.491135757515!2d20.46694545!3d44.77445665!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2srs!4v1594291412484!5m2!1sen!2srs" width="600" height="450"
                         frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
                 </div>
 
-                <div id="right-menu" class="vertical-menu-right ui-box" style="margin-bottom: 16px">
+                <div id="right-menu" class="vertical-menu-right ui-box">
                     <a href="#">
                         <p>Status</p>
                         <p style="color: #87e7a7">Active</p>
@@ -528,26 +323,9 @@
                     </a>
                 </div>
 
-
-
             </div>
-
         </div>
-
-
-
-
     </div>
-
-
-
-    </div>
-
-
-
-
-
-
 </body>
 
 </html>

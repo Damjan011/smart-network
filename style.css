@@ -11,6 +11,10 @@ p {
     margin: 0;
 }
 
+.ui-layout {
+    display: flex;
+}
+
 .ui-side-menu {
     width: 15%;
     min-width: 210px;
@@ -37,51 +41,10 @@ p {
 .ui-logo-label {
     font-weight: 600;
     color: #444;
-    font-size: 17px
+    font-size: 17px;
 }
 
-.ui-center-content {
-    padding-left: 8px;
-    padding-right: 8px;
-    display: flex;
-    flex-flow: column wrap;
-    height: 830px;
-}
-
-@media only screen and (max-width: 1351px) {
-    .ui-center-content {
-        height: unset;
-    }
-    .ui-center-content .ui-box {
-        width: calc(100% - 16px);
-    }
-    #utilization {
-        order: 1;
-    }
-    #map {
-        order: 2;
-    }
-    #bandwidth-usage {
-        order: 3;
-    }
-    #data-transfer {
-        order: 4;
-    }
-    #health {
-        order: 5;
-    }
-    #info-bars {
-        order: 6;
-    }
-    #right-menu {
-        order: 7;
-    }
-    #support-info {
-        order: 8;
-    }
-}
-
-.vertical-menu a {
+.ui-vertical-menu a {
     background-color: white;
     color: #444444;
     display: block;
@@ -97,10 +60,114 @@ p {
     height: 20px;
 }
 
-.vertical-menu img {
+.ui-menu-spacing {
+    margin-bottom: 20px;
+}
+
+.ui-menu-label {
+    border-bottom: 1px solid #f0f0f0;
+    padding-left: 16px;
+    padding-bottom: 8px;
+    color: #8b8b8b;
+    font-size: 11px;
+    font-weight: 600
+}
+
+.ui-vertical-menu img {
     margin-right: 10px;
     width: 19px;
 }
+
+.ui-top-content {
+    background: #fafafa;
+    width: 100%;
+}
+
+.ui-top-header {
+    border-bottom: 1px solid #f0f0f0;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 16px;
+    padding-right: 16px
+}
+
+.ui-name-label {
+    font-weight: 600;
+    color: #6779ff;
+    font-size: 17px
+}
+
+.ui-main-label {
+    font-weight: 600;
+    font-size: 17px;
+}
+
+.ui-header-icons {
+    display: flex;
+    align-items: center;
+    width: 100px;
+    justify-content: space-between;
+}
+
+.header-icons-active {
+    background: #5f72ff;
+    padding: 4px 7px 2px 7px;
+    border-radius: 10px;
+}
+
+.ui-center-content {
+    padding-left: 8px;
+    padding-right: 8px;
+    display: flex;
+    flex-flow: column wrap;
+    height: 830px;
+}
+
+.ui-box {
+    background: white;
+    border: 1px solid #f0f0f0;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 8px;
+    border-collapse: collapse;
+    box-sizing: border-box;
+    width: calc(50% - 16px);
+}
+
+.ui-icon-box {
+    width: calc(100% - 16px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding-left: 17px;
+    padding-top: 17px;
+    padding-bottom: 9px;
+}
+
+.ui-icon-box p:nth-of-type(2) {
+    margin-top: 13px;
+    font-size: 11px;
+    color: gray;
+}
+
+.ui-top-boxes {
+    padding: 8px;
+    padding-bottom: 0;
+    display: flex;
+}
+
+.ui-box-image-wrapper {
+    height: 40px;
+}
+
+.ui-arrow {
+    display: none;
+}
+
+
+/**/
 
 .ui-bar-green {
     width: 2px;
@@ -211,41 +278,6 @@ p {
     font-weight: 600;
 }
 
-.ui-box {
-    background: white;
-    border: 1px solid #f0f0f0;
-    border-radius: 10px;
-    overflow: hidden;
-    margin: 8px;
-    border-collapse: collapse;
-    box-sizing: border-box;
-    width: calc(50% - 16px);
-}
-
-.ui-icon-box {
-    width: calc(100% - 16px);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    padding-left: 17px;
-    padding-top: 17px;
-    padding-bottom: 9px;
-}
-
-.ui-top-boxes {
-    padding: 8px;
-    padding-bottom: 0;
-    display: flex;
-}
-
-.ui-box-image-wrapper {
-    height: 40px;
-}
-
-.ui-arrow {
-    display: none;
-}
-
 @media only screen and (max-width: 1351px) {
     .ui-top-boxes {
         padding: 0;
@@ -299,5 +331,38 @@ p {
     .ui-icon-box p:first-of-type {
         display: inline;
         margin-right: 8px;
+    }
+}
+
+@media only screen and (max-width: 1351px) {
+    .ui-center-content {
+        height: unset;
+    }
+    .ui-center-content .ui-box {
+        width: calc(100% - 16px);
+    }
+    #utilization {
+        order: 1;
+    }
+    #map {
+        order: 2;
+    }
+    #bandwidth-usage {
+        order: 3;
+    }
+    #data-transfer {
+        order: 4;
+    }
+    #health {
+        order: 5;
+    }
+    #info-bars {
+        order: 6;
+    }
+    #right-menu {
+        order: 7;
+    }
+    #support-info {
+        order: 8;
     }
 }
