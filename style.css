@@ -19,7 +19,7 @@ p {
     display: flex;
 }
 
-.ui-side-menu {
+.ui-sidebar {
     width: 15%;
     min-width: 210px;
     background: white;
@@ -49,14 +49,9 @@ p {
 }
 
 .ui-vertical-menu a {
-    background-color: white;
     color: #444444;
-    display: block;
     text-decoration: none;
-    padding-left: 16px;
-    padding-top: 8px;
-    padding-bottom: 8px;
-    padding-right: 16px;
+    padding: 8px 16px 8px 16px;
     font-size: 12px;
     display: flex;
     align-items: center;
@@ -70,11 +65,10 @@ p {
 
 .ui-menu-label {
     border-bottom: 1px solid #f0f0f0;
-    padding-left: 16px;
-    padding-bottom: 8px;
+    padding: 0 0 8px 16px;
     color: #8b8b8b;
     font-size: 11px;
-    font-weight: 600
+    font-weight: 600;
 }
 
 .ui-vertical-menu img {
@@ -93,14 +87,13 @@ p {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding-left: 16px;
-    padding-right: 16px
+    padding: 0 16px 0 16px;
 }
 
 .ui-name-label {
     font-weight: 600;
     color: #6779ff;
-    font-size: 17px
+    font-size: 17px;
 }
 
 .ui-main-label {
@@ -122,8 +115,7 @@ p {
 }
 
 .ui-center-content {
-    padding-left: 8px;
-    padding-right: 8px;
+    padding: 0 8px 0 8px;
     display: flex;
     flex-flow: column wrap;
     height: 830px;
@@ -145,9 +137,7 @@ p {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    padding-left: 17px;
-    padding-top: 17px;
-    padding-bottom: 9px;
+    padding: 17px 0 9px 17px;
 }
 
 .ui-icon-box p:nth-of-type(2) {
@@ -157,8 +147,7 @@ p {
 }
 
 .ui-top-boxes {
-    padding: 8px;
-    padding-bottom: 0;
+    padding: 8px 8px 0 8px;
     display: flex;
 }
 
@@ -174,10 +163,7 @@ p {
 /**/
 
 .ui-progress-box {
-    padding-left: 35px;
-    padding-top: 16px;
-    padding-bottom: 16px;
-    padding-right: 35px;
+    padding: 16px 35px 16px 35px;
     display: flex;
     justify-content: space-between;
 }
@@ -200,11 +186,93 @@ p {
     align-items: flex-end;
 }
 
+.ui-meter {
+    height: 12px;
+    position: relative;
+    background: #555;
+    -moz-border-radius: 25px;
+    -webkit-border-radius: 25px;
+    border-radius: 25px;
+}
+
+.ui-progress-bar-big {
+    display: flex;
+    align-items: center;
+}
+
+.ui-progress-bar-small {
+    display: flex;
+    overflow: hidden;
+    border: 1px solid #e8e4e4;
+    width: 140px;
+}
+
+.ui-progress-bar-big span {
+    width: 55%;
+    text-align: right;
+}
+
+.ui-progress-bar-big p {
+    margin-right: 10px;
+}
+
+.ui-progress-bar-big div {
+    height: 30px;
+    width: 3px;
+    background: black;
+}
+
+.ui-meter>span {
+    display: block;
+    height: 100%;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    background-color: rgb(43, 194, 83);
+    position: relative;
+}
+
+.ui-progress-number {
+    height: 52px;
+    text-align: center;
+    width: 80%;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    font-size: 9px;
+    font-weight: 600;
+    color: #8b8b8b;
+}
+
+.ui-progress-number p:first-of-type {
+    position: relative;
+    left: 43px;
+}
+
+.ui-progress-number p:first-of-type {
+    position: relative;
+    left: 84px;
+}
+
+.ui-progress-number p:first-of-type {
+    position: relative;
+    left: 117px;
+}
+
+.ui-gradient-green {
+    background: linear-gradient(to right, #d4f7df 33%, #a8eebf 33% 66%, #6ee294 66%);
+}
+
+.ui-progress-background {
+    display: block;
+    position: relative;
+    background: white;
+    width: 20%;
+    position: initial;
+    border-radius: unset;
+}
+
 .ui-info-box {
-    padding-left: 20px;
-    padding-top: 16px;
-    padding-bottom: 16px;
-    padding-right: 20px;
+    padding: 16px 20px 16px 20px;
     display: flex;
     justify-content: space-between;
 }
@@ -257,8 +325,15 @@ p {
     background: #6ee294;
     border: 1px solid #6ee294;
     border-radius: 5px;
-    margin-left: 1.6px;
-    margin-right: 1.6px;
+    margin: 0 1.6px 0 1.6px;
+}
+
+.ui-bar-green-empty {
+    width: 3px;
+    height: 16px;
+    border: 1px solid #6ee294;
+    border-radius: 5px;
+    margin: 0 1.6px 0 1.6px;
 }
 
 .ui-bar-orange {
@@ -267,8 +342,7 @@ p {
     border: 1px solid #f5a623;
     background: #f5a623;
     border-radius: 5px;
-    margin-left: 1.6px;
-    margin-right: 1.6px;
+    margin: 0 1.6px 0 1.6px;
 }
 
 .ui-bar-orange-empty {
@@ -276,8 +350,7 @@ p {
     height: 16px;
     border: 1px solid #f5a623;
     border-radius: 5px;
-    margin-left: 1.6px;
-    margin-right: 1.6px;
+    margin: 0 1.6px 0 1.6px;
 }
 
 .ui-dot-container {
@@ -296,50 +369,16 @@ p {
 }
 
 .ui-dot-red {
-    background: #ff3563;
+    background-color: #ff3563;
 }
 
 .ui-dot-green {
-    background: #6ee294;
+    background-color: #6ee294;
 }
 
 .ui-column-break {
     flex-basis: 100%;
     width: 0;
-}
-
-.meter {
-    height: 12px;
-    position: relative;
-    background: #555;
-    -moz-border-radius: 25px;
-    -webkit-border-radius: 25px;
-    border-radius: 25px;
-}
-
-.meter>span {
-    display: block;
-    height: 100%;
-    border-top-left-radius: 20px;
-    border-bottom-left-radius: 20px;
-    background-color: rgb(43, 194, 83);
-    position: relative;
-}
-
-.progress {
-    height: 52px;
-    text-align: center;
-    color: #fff;
-}
-
-.damjan {
-    background: linear-gradient(to right, #d4f7df 33%, #a8eebf 33% 66%, #6ee294 66%);
-}
-
-.novidiv {
-    display: block;
-    position: relative;
-    background: white;
 }
 
 .ui-vertical-menu a:hover {
@@ -353,14 +392,9 @@ p {
 }
 
 .vertical-menu-right a {
-    background-color: white;
     color: #444444;
-    display: block;
     text-decoration: none;
-    padding-left: 16px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-right: 16px;
+    padding: 10px 16px 10px 16px;
     font-size: 13px;
     display: flex;
     align-items: center;
@@ -391,10 +425,7 @@ p {
 }
 
 .ui-support-info-text {
-    padding-left: 16px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-right: 16px;
+    padding: 10px 16px 10px 16px;
     font-size: 13px;
     border-bottom: 1px solid #f0f0f0;
     font-weight: 600;
@@ -402,19 +433,16 @@ p {
 
 @media only screen and (max-width: 1351px) {
     .ui-top-boxes {
+        margin: 16px 16px 8px 16px;
         padding: 0;
         display: block;
         background: white;
         border: 1px solid #f0f0f0;
         border-radius: 10px;
         overflow: hidden;
-        margin-bottom: 8px;
         border-collapse: collapse;
         box-sizing: border-box;
         width: calc(100% - 32px);
-        margin-left: 16px;
-        margin-right: 16px;
-        margin-top: 16px;
     }
     .ui-top-boxes .ui-box {
         border: 0;
@@ -434,10 +462,7 @@ p {
         margin-left: 3px;
     }
     .ui-top-boxes .ui-icon-box {
-        padding-left: 16px;
-        padding-top: 10px;
-        padding-bottom: 10px;
-        padding-right: 16px;
+        padding: 10px 16px 10px 16px;
         font-size: 13px;
         display: flex;
         flex-direction: row;
@@ -454,9 +479,6 @@ p {
         display: inline;
         margin-right: 8px;
     }
-}
-
-@media only screen and (max-width: 1351px) {
     .ui-center-content {
         height: unset;
     }
