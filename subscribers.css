@@ -79,6 +79,8 @@ p {
 .ui-top-content {
     background: #fafafa;
     width: 100%;
+    overflow: hidden;
+    min-height: 100vh;
 }
 
 .ui-top-header {

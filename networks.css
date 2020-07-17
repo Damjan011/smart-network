@@ -1,0 +1,139 @@
+.ui-top-content-search {
+    border-bottom: 1px solid #f0f0f0;
+    padding: 0 16px 0 16px;
+    height: fit-content;
+}
+
+.ui-top-header-search {
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.ui-search-big {
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    border-radius: 8px;
+    background: gray;
+    margin-bottom: 16px;
+}
+
+.table-div {
+    overflow: scroll;
+    padding: 10px 16px 10px 16px;
+}
+
+.table-div table {
+    width: max-content;
+}
+
+.table-div th {
+    text-align: left;
+    color: #8b8b8b;
+    font-size: 11px;
+    margin-bottom: 5px;
+    margin-top: 10px;
+    display: block;
+}
+
+.ui-label-row {
+    color: #6779ff;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.ui-content-row {
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 5px 16px 5px 16px;
+    background: #fff;
+    border: 1px solid #f0f0f0;
+    border-radius: 10px;
+    display: block;
+}
+
+.ui-active-field {
+    padding-left: 8px;
+    padding-right: 8px;
+    width: fit-content;
+    height: 14px;
+    background: #6ee294;
+    border: 1px solid #6ee294;
+    margin-right: 9px;
+    color: #fff;
+    border-radius: 40px;
+    font-size: 8px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ui-vip-clients-field {
+    padding-left: 7px;
+    padding-right: 7px;
+    width: fit-content;
+    height: 13px;
+    background: #fff;
+    border: 1px solid #d0cdcd;
+    margin-right: 9px;
+    color: #94beec;
+    border-radius: 40px;
+    font-size: 8px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ui-more-field {
+    padding-left: 7px;
+    padding-right: 7px;
+    width: fit-content;
+    height: 13px;
+    background: #fff;
+    border: 1px solid #d0cdcd;
+    margin-right: 9px;
+    color: #aba8a8;
+    border-radius: 40px;
+    font-size: 8px;
+    font-weight: 600;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* width */
+
+::-webkit-scrollbar {
+    width: 10px;
+    display: block;
+}
+
+
+/* Track */
+
+ ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+
+/* Handle */
+
+ ::-webkit-scrollbar-thumb {
+    background: #888;
+    border-left: 20px solid white;
+    border-right: 20px solid white;
+}
+
+
+/* Handle on hover */
+
+ ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
