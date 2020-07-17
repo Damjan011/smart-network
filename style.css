@@ -386,7 +386,7 @@ p {
     border-right: 4px solid #5f72ff;
 }
 
-.ui-vertical-menu a.active {
+.active {
     background-color: #eeeeee;
     border-right: 4px solid #5f72ff;
 }
