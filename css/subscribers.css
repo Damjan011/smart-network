@@ -10,6 +10,7 @@ body {
     font-family: "SF Text";
 }
 
+h2,
 h3,
 h1,
 p {
@@ -40,12 +41,16 @@ p {
     margin-top: 15px
 }
 
-.ui-logo-small {
-    width: 21px;
+.ui-logo-wrapper {
     border: 2px solid #dddddd;
     padding: 8px;
     border-radius: 10px;
-    margin-right: 8px
+    margin-right: 8px;
+}
+
+.ui-logo-small {
+    width: 21px;
+    height: 21px;
 }
 
 .ui-logo-label {
