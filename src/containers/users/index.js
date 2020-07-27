@@ -1,4 +1,6 @@
 import React from 'react';
+import SearchBar from '../../components/searchBar';
+
 // U src folderu napravi fajl
 function Users() {
     return (
@@ -16,19 +18,16 @@ function Users() {
     
          <div className="ui-top-content">
          <div className="ui-top-content-search">
-             <div className="ui-top-header-search">
-                 <p className="ui-name-label">John Miller</p>
-                 <p className="ui-main-label">Miller-40242</p>
-                 <div className="ui-header-icons">
-                     <img className="header-icons-active" src="img/pin.png"/>
-                     <img src="img/slider.png"/>
-                     <img src="img/dots.png"/>
-                 </div>
-             </div>
-             <div className="ui-search-big">
-                 <img src="damjan" />
-                 <p>Search network...</p>
-             </div>
+            <div className="ui-top-header-search">
+                <p className="ui-name-label">John Miller</p>
+                <p className="ui-main-label">Miller-40242</p>
+                <div className="ui-header-icons">
+                    <img className="header-icons-active" src="img/pin.png"/>
+                    <img src="img/slider.png"/>
+                    <img src="img/dots.png"/>
+                </div>
+            </div>
+            <SearchBar />
          </div>
          <div className="table-div">
              <table>
