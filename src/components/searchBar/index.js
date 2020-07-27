@@ -1,9 +1,15 @@
+import './style.css';
 import React from 'react';
+import MagnifyingGlass from '../../assets/images/magnifying-icon.png';
 
-const SearchBar = ({}) => (
+const SearchBar = ({ }) => (
   <div className="ui-search-big">
-    <img src="damjan" />
-    <p>Search network...</p>
+    <div className="ui-search-icon-wrapper">
+      <img src={MagnifyingGlass} alt="Magnifying glass icon" />
+    </div>
+    <div className="ui-input-wrapper">
+      <input type="text" placeholder="Search network..." />
+    </div>
   </div>
 )
 

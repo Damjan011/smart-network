@@ -1,7 +1,5 @@
 import React from 'react';
-import SearchBar from '../../components/searchBar';
 
-// U src folderu napravi fajl
 function Users() {
   return (
     <div className="ui-layout">
@@ -14,8 +12,8 @@ function Users() {
             <p>Smart Network</p>
           </div>
         </div>
-
       </div>
+
       <div className="ui-top-content">
         <div className="ui-top-content-search">
           <div className="ui-top-header-search">
@@ -27,7 +25,10 @@ function Users() {
               <img src="img/dots.png" />
             </div>
           </div>
-          <SearchBar />
+          <div className="ui-search-big">
+            <img src="damjan" />
+            <p>Search network...</p>
+          </div>
         </div>
         <div className="table-div">
           <table>

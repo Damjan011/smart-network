@@ -1,7 +1,11 @@
 import React from 'react';
+<<<<<<< HEAD
+
+=======
 import SearchBar from '../../components/searchBar';
 
 // U src folderu napravi fajl
+>>>>>>> ebf292a389187dd51a50cf56709839e9e7688215
 function Users() {
   return (
     <div className="ui-layout">
@@ -14,8 +18,9 @@ function Users() {
             <p>Smart Network</p>
           </div>
         </div>
-
+<<<<<<< HEAD
       </div>
+
       <div className="ui-top-content">
         <div className="ui-top-content-search">
           <div className="ui-top-header-search">
@@ -27,7 +32,10 @@ function Users() {
               <img src="img/dots.png" />
             </div>
           </div>
-          <SearchBar />
+          <div className="ui-search-big">
+            <img src="damjan" />
+            <p>Search network...</p>
+          </div>
         </div>
         <div className="table-div">
           <table>
@@ -88,6 +96,81 @@ function Users() {
                       <div className="ui-more-field">
                         <p>
                           5 MORE...
+=======
+    
+         <div className="ui-top-content">
+         <div className="ui-top-content-search">
+            <div className="ui-top-header-search">
+                <p className="ui-name-label">John Miller</p>
+                <p className="ui-main-label">Miller-40242</p>
+                <div className="ui-header-icons">
+                    <img className="header-icons-active" src="img/pin.png"/>
+                    <img src="img/slider.png"/>
+                    <img src="img/dots.png"/>
+                </div>
+            </div>
+            <SearchBar />
+         </div>
+         <div className="table-div">
+             <table>
+                 <tr className="ui-network-labels">
+                     <th>
+                         <div>
+                             <p>Name</p>
+                         </div>
+                     </th>
+                     <th>
+                         <div>
+                             <p>Last 90 min.</p>
+                         </div>
+                     </th>
+                     <th>
+                         <div>
+                             <p>Traffic (absolute)</p>
+                         </div>
+                     </th>
+                     <th>
+                         <div>
+                             <p>Health</p>
+                         </div>
+                     </th>
+                     <th>
+                         <div>
+                             <p>Device</p>
+                         </div>
+                     </th>
+                 </tr>
+                 <tr>
+                     <td>
+                         <div className="ui-table-label">
+                             <p>Networks</p>
+                         </div>
+                     </td>
+                 </tr>
+                 <tr className="ui-content-row">
+                     <td>
+                         <div className="ui-network-status-container">
+                             <div className="ui-network-checkbox ui-display-checkbox ui-icon-checked">
+                                 <img src="../img/pin.png" alt="Check icon" className="ui-check-icon" />
+                             </div>
+                             <div className="ui-network-image-container">
+                                 <img className="ui-network-image" src="../img/Group 72.png" />
+                             </div>
+                             <div>
+                                 <div className="ui-network-label-container">
+                                     <p>Armstrong</p>
+                                 </div>
+                                 <div className="ui-network-status">
+                                     <div className="ui-active-field">
+                                         <p>ACTIVE</p>
+                                     </div>
+                                     <div className="ui-vip-clients-field">
+                                         <p>VIP CLIENTS</p>
+                                     </div>
+                                     <div className="ui-more-field">
+                                         <p>
+                                             5 MORE...
+>>>>>>> ebf292a389187dd51a50cf56709839e9e7688215
                                          </p>
                       </div>
                     </div>

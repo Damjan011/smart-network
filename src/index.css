@@ -607,25 +607,6 @@ p {
   justify-content: space-between;
 }
 
-.ui-search-big {
-  height: 36px;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  background: #E9E9E9;
-  border-radius: 10px;
-  margin-bottom: 16px;
-  font-weight: 500;
-  font-size: 15px;
-  letter-spacing: -0.16px;
-  color: #777777;
-}
-
-.ui-search-big img {
-  margin-left: 10px;
-  margin-right: 10px;
-}
-
 .table-div {
   overflow-x: auto;
   overflow-y: visible;
