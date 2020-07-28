@@ -1,7 +1,6 @@
 import React from 'react';
-import SearchBar from '../../components/searchBar';
+import TopContentSearch from '../../components/topContentSearch';
 
-// U src folderu napravi fajl
 function Users() {
   return (
     <div className="ui-layout">
@@ -17,18 +16,7 @@ function Users() {
 
       </div>
       <div className="ui-top-content">
-        <div className="ui-top-content-search">
-          <div className="ui-top-header-search">
-            <p className="ui-name-label">John Miller</p>
-            <p className="ui-main-label">Miller-40242</p>
-            <div className="ui-header-icons">
-              <img className="header-icons-active" src="img/pin.png" />
-              <img src="img/slider.png" />
-              <img src="img/dots.png" />
-            </div>
-          </div>
-          <SearchBar />
-        </div>
+        <TopContentSearch />
         <div className="table-div">
           <table>
             <tr className="ui-network-labels">

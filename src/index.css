@@ -123,30 +123,6 @@ p {
   padding: 0 16px 0 16px;
 }
 
-.ui-name-label {
-  font-weight: 600;
-  color: #6779ff;
-  font-size: 17px;
-}
-
-.ui-main-label {
-  font-weight: 600;
-  font-size: 17px;
-}
-
-.ui-header-icons {
-  display: flex;
-  align-items: center;
-  width: 100px;
-  justify-content: space-between;
-}
-
-.header-icons-active {
-  background: #5f72ff;
-  padding: 4px 7px 2px 7px;
-  border-radius: 10px;
-}
-
 .ui-center-content {
   padding: 0 8px 0 8px;
   display: flex;
@@ -593,18 +569,6 @@ p {
   #support-info {
       order: 8;
   }
-}
-.ui-top-content-search {
-  border-bottom: 1px solid #f0f0f0;
-  padding: 0 16px 0 16px;
-  height: fit-content;
-}
-
-.ui-top-header-search {
-  height: 80px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
 }
 
 .table-div {
