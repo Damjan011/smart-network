@@ -171,7 +171,7 @@ function Users() {
                 </div>
               </td>
               <td>
-                <div>
+                <div className="ui-basic-row-item">
                   <p>Device</p>
                 </div>
               </td>

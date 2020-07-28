@@ -236,6 +236,14 @@
     justify-content: center;
 }
 
+.ui-basic-row-item {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 22px;
+    letter-spacing: -0.16px;
+}
+
 .ui-traffic-speed {
     display: flex;
     flex-direction: column;
