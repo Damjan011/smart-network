@@ -1,7 +1,7 @@
 import React from 'react';
 import Home from './containers/home';
-import About from './containers/about';
-import Users from './containers/users';
+import Subscribers from './containers/subscribers';
+import Networks from './containers/networks';
 import {
     BrowserRouter as Router,
     Switch,
@@ -19,10 +19,10 @@ import {
                 <Link to="/">Home</Link>
               </li>
               <li>
-                <Link to="/about">About</Link>
+                <Link to="/subscribers">Subscribers</Link>
               </li>
               <li>
-                <Link to="/users">Users</Link>
+                <Link to="/networks">Networks</Link>
               </li>
             </ul>
           </nav>
@@ -30,11 +30,11 @@ import {
           {/* A <Switch> looks through its children <Route>s and
               renders the first one that matches the current URL. */}
           <Switch>
-            <Route path="/about">
-              <About />
+            <Route path="/subscribers">
+              <Subscribers />
             </Route>
-            <Route path="/users">
-              <Users />
+            <Route path="/networks">
+              <Networks />
             </Route>
             <Route path="/">
               <Home />

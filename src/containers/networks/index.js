@@ -1,7 +1,7 @@
 import React from 'react';
 import TopContentSearch from '../../components/topContentSearch';
 
-function Users() {
+function Networks() {
   return (
     <div className="ui-layout">
       <div className="ui-sidebar">
@@ -60,7 +60,7 @@ function Users() {
                     <img src="../img/pin.png" alt="Check icon" className="ui-check-icon" />
                   </div>
                   <div className="ui-network-image-container">
-                    <img className="ui-network-image" src="../img/Group 72.png" />
+                    <img className="ui-network-image" src="../../assets/images/Group 72.png" alt="Network logo"/>
                   </div>
                   <div>
                     <div className="ui-network-label-container">
@@ -142,7 +142,7 @@ function Users() {
               <td>
                 <div className="ui-smiley-bar">
                   <div>
-                    <img className="ui-smiley-image" src="../img/smiley.png" alt="Smiley image" />
+                    <img className="ui-smiley-image" src="../../assets/images/smiley.png" alt="Smiley image" />
                   </div>
                   <div className="ui-bar-green">
                   </div>
@@ -183,4 +183,4 @@ function Users() {
   );
 }
 
-export default Users;
+export default Networks;
