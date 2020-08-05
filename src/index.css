@@ -160,21 +160,8 @@ h2, h3, h1, p {
   background-color: #eeeeee;
   border-right: 4px solid #5f72ff;
 }
+/**/
 
-.ui-green-item p:nth-of-type(2) {
-  color: #87e7a7;
-}
-
-.ui-blue-text {
-  color: #6779ff;
-}
-
-.ui-support-info-text {
-  padding: 10px 16px 10px 16px;
-  font-size: 13px;
-  border-bottom: 1px solid #f0f0f0;
-  font-weight: 600;
-}
 
 @media only screen and (max-width: 1351px) {
   .ui-center-content {
