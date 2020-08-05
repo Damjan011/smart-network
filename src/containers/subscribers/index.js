@@ -1,5 +1,7 @@
 import React from 'react';
 import IconBox from '../../components/iconBox';
+import SubscribersMap from '../../components/subscribersMap';
+import SubscribersUtilization from '../../components/subscribersUtilization';
 
 function Subscribers() {
   return (
@@ -19,49 +21,8 @@ function Subscribers() {
         <IconBox />
       </div>
       <div className="ui-center-content">
-        <div id="utilization" className="ui-box ui-progress-box">
-          <div className="ui-utilization">
-            <div className="ui-utilization-labels">
-              <p>JUNE UTILIZATION</p>
-              <p>LIMIT: 35 GB</p>
-            </div>
-            <div className="ui-meter ui-progress-bar-big">
-              <span><p>14.1 GB</p>  </span>
-              <div></div>
-            </div>
-          </div>
-          <div className="ui-speed">
-            <div className="ui-speed-inner">
-              <div className="ui-flex">
-                <img src="img/arrow-dl.png" />
-                <p className=" ui-speed-label-green ">21.4 Mb/s</p>
-              </div>
-              <div className="ui-progress-gradient ui-gradient-green ui-progress-bar-small ">
-                <span className="ui-progress-number ">
-                  <p>1</p>
-                  <p>5</p>
-                  <p>20</p>
-                </span>
-                <span className="ui-progress-background "></span>
-              </div>
-            </div>
-            <div className="ui-speed-inner ">
-              <div className="ui-flex ">
-                <img src="img/arrow-up.png" />
-                <p className="ui-speed-label-blue ">4.8 Mb/s</p>
-              </div>
-              <div className="ui-progress-gradient ui-gradient-blue ui-progress-bar-small ">
-                <span className="ui-progress-number ">
-                  <p>1</p>
-                  <p>5</p>
-                  <p>20</p>
-                </span>
-                <span className="ui-progress-background "></span>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div id="info-bars " className="ui-box ui-info-box ">
+        <SubscribersUtilization/>
+        <div id="info-bars" className="ui-box ui-info-box ">
           <div className="ui-bar-container ">
             <p className="ui-bar-container-label ">OVERALL INTERNET HEALTH</p>
             <div className="ui-smiley-bar ">
@@ -225,10 +186,7 @@ function Subscribers() {
         <div className="ui-column-break ">
         </div>
 
-        <div id="map " className="ui-box ">
-          <iframe title="subscribers-map" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d22658.491135757515!2d20.46694545!3d44.77445665!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2srs!4v1594291412484!5m2!1sen!2srs " width="100% " height="300
-                            " frameborder="0 " allowfullscreen=" " aria-hidden="false " tabindex="0 "></iframe>
-        </div>
+        <SubscribersMap/>
 
         <div id="right-menu " className="vertical-menu-right ui-box ">
           <a className="ui-green-item " href="# ">
