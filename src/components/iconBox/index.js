@@ -1,7 +1,7 @@
 import './style.css';
 import React from 'react';
 import UserIcon from '../../assets/images/user.png';
-import DropdownArrow from '../../assets/images/dropdown-arrow.png'
+import DropdownArrow from '../../assets/images/dropdown-arrow.png';
 
 const IconBox = ({ }) => (
 

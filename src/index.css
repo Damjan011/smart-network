@@ -146,9 +146,6 @@ h2, h3, h1, p {
 /**/
 
 
-
-
-
 .ui-column-break {
   flex-basis: 100%;
   width: 0;
@@ -162,31 +159,6 @@ h2, h3, h1, p {
 .active {
   background-color: #eeeeee;
   border-right: 4px solid #5f72ff;
-}
-
-.vertical-menu-right a {
-  color: #444444;
-  text-decoration: none;
-  padding: 10px 16px 10px 16px;
-  font-size: 13px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  border-bottom: 1px solid #f0f0f0;
-  font-weight: 600;
-}
-
-.vertical-menu-right p:nth-of-type(2) {
-  color: #8b8b8b;
-  text-align: right;
-}
-
-.vertical-menu-right p:first-of-type {
-  text-align: left;
-}
-
-.ui-blue-item p:nth-of-type(2) {
-  color: #6779ff;
 }
 
 .ui-green-item p:nth-of-type(2) {
@@ -229,7 +201,7 @@ h2, h3, h1, p {
   #info-bars {
       order: 6;
   }
-  #right-menu {
+  #subscribers-menu {
       order: 7;
   }
   #support-info {
