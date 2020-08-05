@@ -10,10 +10,7 @@ body {
   font-family: "SF Text";
 }
 
-h2,
-h3,
-h1,
-p {
+h2, h3, h1, p {
   margin: 0;
 }
 
@@ -141,33 +138,10 @@ p {
   width: calc(50% - 16px);
 }
 
-.ui-icon-box {
-  width: calc(100% - 16px);
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  padding: 17px 0 9px 17px;
-}
-
-.ui-icon-box p:nth-of-type(2) {
-  margin-top: 13px;
-  font-size: 11px;
-  color: gray;
-}
-
 .ui-top-boxes {
   padding: 8px 8px 0 8px;
   display: flex;
 }
-
-.ui-box-image-wrapper {
-  height: 40px;
-}
-
-.ui-arrow {
-  display: none;
-}
-
 
 /**/
 
@@ -491,50 +465,7 @@ p {
   font-weight: 600;
 }
 
-@media only screen and (max-width: 1351px) {
-  .ui-top-boxes {
-      margin: 16px 16px 8px 16px;
-      padding: 0;
-      display: block;
-      background: white;
-      border: 1px solid #f0f0f0;
-      border-radius: 10px;
-      overflow: hidden;
-      border-collapse: collapse;
-      box-sizing: border-box;
-      width: calc(100% - 32px);
-  }
-  .ui-top-boxes .ui-box {
-      border: 0;
-      margin: 0;
-      border-radius: 0;
-  }
-  .ui-arrow {
-      display: block;
-      float: right;
-  }
-  .ui-box-image-wrapper {
-      display: flex;
-      align-items: center;
-      height: 20px;
-  }
-  .ui-img-fix {
-      margin-left: 3px;
-  }
-  .ui-top-boxes .ui-icon-box {
-      padding: 10px 16px 10px 16px;
-      font-size: 13px;
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      justify-content: space-between;
-      border-bottom: 1px solid #f0f0f0;
-      font-weight: 600;
-      width: 100%;
-  }
-  .ui-icon-box p:nth-of-type(2) {
-      display: none;
-  }
+/* @media only screen and (max-width: 1351px) {
   .ui-icon-box p:first-of-type {
       display: inline;
       margin-right: 8px;
@@ -569,7 +500,7 @@ p {
   #support-info {
       order: 8;
   }
-}
+} */
 
 .table-div {
   overflow-x: auto;
