@@ -1,19 +1,32 @@
 import React, { Component } from 'react';
 import GoogleMapReact from 'google-map-react';
+import MapPin from '../../assets/images/map-pin.png';
 
-const MapMarker = ({ text }) => <div><h1>{text}</h1></div>;
+const MapMarker = ({ text }) => <div className="aa"><img className="ui-map-pin " src={MapPin} alt="Map pin"/><h1>{text}</h1></div>;
+const MarkerCompany = ({text}) => <div className="aa"><h1>{text}</h1></div>;
 const handleApiLoaded = (map, maps) => {
   // use map and maps objects
 };
 
+
+
+const InfoWindow = props => (
+  props.show ? (<div style={{width: 100, height: 100}}>Info window</div>) : null
+)
+
+
+
+
 class SimpleMap extends Component {
   static defaultProps = {
     center: {
-      lat: 59.95,
-      lng: 30.33
+      lat: 44.784912,
+      lng: 20.473332
     },
-    zoom: 11
+    zoom: 12
   };
+
+
 
   render() {
     return (
@@ -28,9 +41,17 @@ class SimpleMap extends Component {
           onGoogleApiLoaded={({ map, maps }) => handleApiLoaded(map, maps)}
         >
           <MapMarker
-            lat={59.955413}
-            lng={30.337844}
-            text="My Marker"
+            lat={44.784912}
+            lng={20.473332}
+            text="Home"
+            onClick={() => {
+              InfoWindow.open();
+           }}
+          />
+          <MarkerCompany
+            lat={44.776450}
+            lng={20.475348}
+            text="Liberte"
           />
         </GoogleMapReact>
       </div>

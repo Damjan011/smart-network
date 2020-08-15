@@ -33,7 +33,7 @@ const SubscribersUtilization = ({ }) => (
           </div>
         </div>
         <div className="ui-progress-gradient ui-gradient-green">
-          <span className="ui-progress-number-container">
+          <div className="ui-progress-number-container">
             <div>
               <p>1</p>
             </div>
@@ -43,7 +43,7 @@ const SubscribersUtilization = ({ }) => (
             <div>
               <p>20</p>
             </div>
-          </span>
+          </div>
           <span className="ui-progress-background"></span>
         </div>
       </div>
@@ -57,7 +57,7 @@ const SubscribersUtilization = ({ }) => (
           </div>
         </div>
         <div className="ui-progress-gradient ui-gradient-blue">
-          <span className="ui-progress-number-container">
+          <div className="ui-progress-number-container">
             <div>
               <p>1</p>
             </div>
@@ -67,7 +67,7 @@ const SubscribersUtilization = ({ }) => (
             <div>
               <p>20</p>
             </div>
-          </span>
+          </div>
           <span className="ui-progress-background"></span>
         </div>
       </div>

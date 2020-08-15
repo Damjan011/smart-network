@@ -1,6 +1,7 @@
 import React from 'react';
 import TopContentSearch from '../../components/topContentSearch';
-import NetworksTable from '../../components/networksTable';
+// import NetworksTable from '../../components/networksTable';
+import SortableTable from '../../components/networksTable';
 
 function Networks() {
   return (
@@ -18,7 +19,7 @@ function Networks() {
       </div>
       <div className="ui-top-content">
         <TopContentSearch />
-        <NetworksTable/>
+        <SortableTable/>
       </div>
     </div>
   );
