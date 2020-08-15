@@ -25,37 +25,7 @@
   display: none
 }
 
-.table-div table th:first-of-type {
-  position: sticky;
-  z-index: 3;
-  left: 0;
-}
-
-.ui-heading-sort-align th div {
-  display: flex;
-  align-items: center;
-}
-
-.ui-device-ip-text {
-  font-style: normal;
-font-weight: 500;
-font-size: 15px;
-letter-spacing: -0.16px;
-color: #777777;
-}
-
-.ui-map-pin {
-  width: 28px;
-  height: 40px;
-}
-
-.ui-status-text {
-  font-style: normal;
-font-weight: 500;
-font-size: 15px;
-letter-spacing: -0.16px;
-color: #777777;
-}
+/* sorting CSS */
 
 th div.ascending::after {
   content: '';
@@ -78,9 +48,28 @@ th div.descending::after {
   cursor: pointer;
 }
 
+.ui-heading-sort-align th div {
+  display: flex;
+  align-items: center;
+}
+
+/* Frozen first column */
+
+.table-div table th:first-of-type {
+  position: sticky;
+  z-index: 3;
+  left: 0;
+}
+
 .table-div table td:first-of-type {
   position: sticky;
   left: 0;
+}
+
+/* Column min-width */
+
+.table-div td {
+  min-width: 130px;
 }
 
 .table-div {
@@ -308,4 +297,20 @@ table {
   flex-direction: row;
   align-items: center;
   justify-content: center;
+}
+
+.ui-device-ip-text {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  letter-spacing: -0.16px;
+  color: #777777;
+}
+
+.ui-status-text {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  letter-spacing: -0.16px;
+  color: #777777;
 }
