@@ -5,6 +5,7 @@ import UploadArrow from '../../assets/images/arrow-up.png';
 import SmileyHappy from '../../assets/images/smiley-happy.png';
 import BlueCheckIcon from '../../assets/images/check-blue.png';
 import RouterIconGray from '../../assets/images/router-icon.png';
+import TrafficDropdown from '../trafficDropdown';
 
 const useSortableData = (items, config = null) => {
   const [sortConfig, setSortConfig] = React.useState(config);
@@ -83,6 +84,11 @@ const NetworksTable = (props) => {
               <p>
                 Traffic (absolute)
                 </p>
+                <TrafficDropdown/>
+
+
+
+                
 
             </div>
           </th>

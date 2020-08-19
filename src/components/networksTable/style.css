@@ -48,10 +48,10 @@ th div.descending::after {
   cursor: pointer;
 }
 
-.ui-heading-sort-align th div {
+/* .ui-heading-sort-align th div {
   display: flex;
   align-items: center;
-}
+} */
 
 /* Frozen first column */
 

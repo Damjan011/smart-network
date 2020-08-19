@@ -7,15 +7,9 @@ const MarkerCompany = ({text}) => <div className="aa"><h1>{text}</h1></div>;
 const handleApiLoaded = (map, maps) => {
   // use map and maps objects
 };
-
-
-
 const InfoWindow = props => (
   props.show ? (<div style={{width: 100, height: 100}}>Info window</div>) : null
 )
-
-
-
 
 class SimpleMap extends Component {
   static defaultProps = {
@@ -25,8 +19,6 @@ class SimpleMap extends Component {
     },
     zoom: 12
   };
-
-
 
   render() {
     return (
