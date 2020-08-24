@@ -5,6 +5,7 @@
   width: 16px
 }
 
+
 /* background of the scrollbar except button or resizer */
 
 .table-div::-webkit-scrollbar-track {
@@ -55,7 +56,7 @@ th div.descending::after {
 
 /* Frozen first column */
 
-.table-div table th:first-of-type {
+.table-div table th:first-child {
   position: sticky;
   z-index: 3;
   left: 0;

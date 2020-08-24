@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './style.css';
 import DownloadArrow from '../../assets/images/arrow-dl.png';
 import UploadArrow from '../../assets/images/arrow-up.png';
@@ -6,6 +6,8 @@ import SmileyHappy from '../../assets/images/smiley-happy.png';
 import BlueCheckIcon from '../../assets/images/check-blue.png';
 import RouterIconGray from '../../assets/images/router-icon.png';
 import TrafficDropdown from '../trafficDropdown';
+import ReactModal from 'react-modal';
+import Modal from '../modal';
 
 const useSortableData = (items, config = null) => {
   const [sortConfig, setSortConfig] = React.useState(config);
@@ -40,7 +42,16 @@ const useSortableData = (items, config = null) => {
   return { items: sortedItems, requestSort, sortConfig };
 };
 
+
+
 const NetworksTable = (props) => {
+  const [modalIsOpen, setIsOpen] = useState(true);
+  function openModal() {
+    setIsOpen(true);
+  };
+  function closeModal() {
+    setIsOpen(false);
+  };
   const { items, requestSort, sortConfig } = useSortableData(props.networksTableData);
   const getClassNamesFor = (name) => {
     if (!sortConfig) {
@@ -50,6 +61,10 @@ const NetworksTable = (props) => {
   };
   return (
     <div className="table-div">
+      <ReactModal isOpen={modalIsOpen}
+        onRequestClose={closeModal}>
+          <Modal/>
+      </ReactModal>
       <table className="ui-multi-row ui-heading-sort-align">
         <tr className="ui-network-labels">
           <th>
@@ -77,19 +92,14 @@ const NetworksTable = (props) => {
             </div>
           </th>
           <th>
-            <div
-              onClick={() => requestSort('speed')}
-              className={getClassNamesFor('speed')}
-            >
+            <div onClick={() => requestSort('speed')} className={getClassNamesFor('speed')}>
+
+
+
               <p>
                 Traffic (absolute)
-                </p>
-                <TrafficDropdown/>
-
-
-
-                
-
+              </p>
+              <TrafficDropdown />
             </div>
           </th>
           <th>
@@ -103,19 +113,21 @@ const NetworksTable = (props) => {
             </div>
           </th>
           <th>
-            <div>
+            <div >
               <p>Status</p>
             </div>
+            <button variant="primary" onClick={openModal}>Click modal</button>
+
           </th>
         </tr>
-        <tr>
+        <tr className="ui-table-label">
           <td>
-            <div className="ui-table-label">
+            <div>
               <p>Networks</p>
             </div>
+
           </td>
         </tr>
-
         {items.map((item) => (
           <tr className="ui-content-row" key={item.id}>
             <td>
@@ -236,18 +248,19 @@ const NetworksTable = (props) => {
             </td>
             <td>
               <div className="ui-basic-row-item ui-device-ip-text">
-        <p>{item.device}</p>
+                <p>{item.device}</p>
               </div>
             </td>
             <td>
               <div className="ui-basic-row-item ui-status-text">
-        <p>53432332k332k</p>
+                <p>53432332k332k</p>
               </div>
             </td>
           </tr>
         ))}
       </table>
     </div>
+
   )
 };
 

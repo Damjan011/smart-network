@@ -1,15 +1,13 @@
 import React, { Component } from 'react';
+import './style.css';
 import GoogleMapReact from 'google-map-react';
 import MapPin from '../../assets/images/map-pin.png';
 
-const MapMarker = ({ text }) => <div className="aa"><img className="ui-map-pin " src={MapPin} alt="Map pin"/><h1>{text}</h1></div>;
-const MarkerCompany = ({text}) => <div className="aa"><h1>{text}</h1></div>;
+const MapMarker = ({ text }) => <div className="ui-marker"><div className="damjan"></div><img className="ui-map-pin" src={MapPin} alt="Map pin"/><h1>{text}</h1></div>;
+const MarkerCompany = ({text}) => <div className="ui-marker"><img className="ui-map-pin" src={MapPin} alt="Map pin"/><h1>{text}</h1></div>;
 const handleApiLoaded = (map, maps) => {
   // use map and maps objects
 };
-const InfoWindow = props => (
-  props.show ? (<div style={{width: 100, height: 100}}>Info window</div>) : null
-)
 
 class SimpleMap extends Component {
   static defaultProps = {
@@ -17,10 +15,14 @@ class SimpleMap extends Component {
       lat: 44.784912,
       lng: 20.473332
     },
-    zoom: 12
+    zoom: 14
   };
-
   render() {
+    const greatPlaceStyle = {
+      position: 'absolute',
+      background: 'red',
+      transform: 'translate(-50%, -50%)'
+    }
     return (
       // Important! Always set the container height explicitly
       <div style={{ height: '100vh', width: '100%' }}>
@@ -32,13 +34,13 @@ class SimpleMap extends Component {
           yesIWantToUseGoogleMapApiInternals
           onGoogleApiLoaded={({ map, maps }) => handleApiLoaded(map, maps)}
         >
+          <div style={greatPlaceStyle}>
+      {this.props.text}
+    </div>
           <MapMarker
             lat={44.784912}
             lng={20.473332}
             text="Home"
-            onClick={() => {
-              InfoWindow.open();
-           }}
           />
           <MarkerCompany
             lat={44.776450}
