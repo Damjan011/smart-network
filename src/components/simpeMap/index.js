@@ -1,56 +1,48 @@
-import React, { Component } from 'react';
+import { Map, InfoWindow, Marker, GoogleApiWrapper } from 'google-maps-react';
+import React from 'react';
 import './style.css';
-import GoogleMapReact from 'google-map-react';
-import MapPin from '../../assets/images/map-pin.png';
+import InfoWindowContent from './infoWindowContent';
 
-const MapMarker = ({ text }) => <div className="ui-marker"><div className="damjan"></div><img className="ui-map-pin" src={MapPin} alt="Map pin"/><h1>{text}</h1></div>;
-const MarkerCompany = ({text}) => <div className="ui-marker"><img className="ui-map-pin" src={MapPin} alt="Map pin"/><h1>{text}</h1></div>;
-const handleApiLoaded = (map, maps) => {
-  // use map and maps objects
-};
-
-class SimpleMap extends Component {
-  static defaultProps = {
-    center: {
-      lat: 44.784912,
-      lng: 20.473332
-    },
-    zoom: 14
+export class MapContainer extends React.Component {
+  state = {
+    showingInfoWindow: false,
+    activeMarker: {},
+    selectedPlace: {},
   };
-  render() {
-    const greatPlaceStyle = {
-      position: 'absolute',
-      background: 'red',
-      transform: 'translate(-50%, -50%)'
+
+  onMarkerClick = (props, marker, e) =>
+    this.setState({
+      selectedPlace: props,
+      activeMarker: marker,
+      showingInfoWindow: true
+    });
+
+  onMapClicked = (props) => {
+    if (this.state.showingInfoWindow) {
+      this.setState({
+        showingInfoWindow: false,
+        activeMarker: null
+      })
     }
+  };
+
+  render() {
     return (
-      // Important! Always set the container height explicitly
-      <div style={{ height: '100vh', width: '100%' }}>
-        <GoogleMapReact
-          // bootstrapURLKeys={{ key: AIzaSyClNsEyR4b1rH5mmoc0Nk5niu9aEomPYpA }}
-          apiKey = "AIzaSyClNsEyR4b1rH5mmoc0Nk5niu9aEomPYpA"
-          defaultCenter={this.props.center}
-          defaultZoom={this.props.zoom}
-          yesIWantToUseGoogleMapApiInternals
-          onGoogleApiLoaded={({ map, maps }) => handleApiLoaded(map, maps)}
-        >
-          <div style={greatPlaceStyle}>
-      {this.props.text}
-    </div>
-          <MapMarker
-            lat={44.784912}
-            lng={20.473332}
-            text="Home"
-          />
-          <MarkerCompany
-            lat={44.776450}
-            lng={20.475348}
-            text="Liberte"
-          />
-        </GoogleMapReact>
-      </div>
+      <Map google={this.props.google} onClick={this.onMapClicked} zoom={14}>
+        <Marker onClick={this.onMarkerClick} name={'Example name'} />
+        <InfoWindow className='ui-info-window'
+          marker={this.state.activeMarker}
+          visible={this.state.showingInfoWindow}>
+          {/* <div>
+            <h1>{this.state.selectedPlace.name}</h1>
+          </div> */}
+          <InfoWindowContent />
+        </InfoWindow>
+      </Map>
     );
   }
 }
 
-export default SimpleMap;
+export default GoogleApiWrapper({
+  apiKey: "AIzaSyClhpytnSsGpLP5r6MFq05qM3iHHkuSSCI"
+})(MapContainer)

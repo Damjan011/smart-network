@@ -46,4 +46,4 @@ const ModalDropdownRow = ({ }) => {
   );
 }
 
-export default ModalDropdownRow
+export default ModalDropdownRow;
