@@ -1,7 +1,9 @@
-import { Map, InfoWindow, Marker, GoogleApiWrapper } from 'google-maps-react';
+import { Map, Marker, GoogleApiWrapper } from 'google-maps-react';
 import React from 'react';
 import './style.css';
 import InfoWindowContent from './infoWindowContent';
+import InfoWindowEx from './infoWindowEx';
+//import InfoWindowAcknowledge from './infoWindowContent/infoWindowAcknowledge';
 
 export class MapContainer extends React.Component {
   state = {
@@ -30,14 +32,20 @@ export class MapContainer extends React.Component {
     return (
       <Map google={this.props.google} onClick={this.onMapClicked} zoom={14}>
         <Marker onClick={this.onMarkerClick} name={'Example name'} />
-        <InfoWindow className='ui-info-window'
+        <InfoWindowEx className='ui-info-window'
           marker={this.state.activeMarker}
           visible={this.state.showingInfoWindow}>
-          {/* <div>
-            <h1>{this.state.selectedPlace.name}</h1>
-          </div> */}
           <InfoWindowContent />
-        </InfoWindow>
+        </InfoWindowEx>
+   
+        {/* <Marker onClick={this.onMarkerClick}
+          name={'SOMA'}
+          position={{ lat: 37.778519, lng: -122.405640 }} />
+          <InfoWindowEx className='ui-info-window'
+          marker={this.state.activeMarker}
+          visible={this.state.showingInfoWindow}>
+          <InfoWindowAcknowledge />
+        </InfoWindowEx> */}
       </Map>
     );
   }

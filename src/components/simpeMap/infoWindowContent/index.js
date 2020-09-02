@@ -1,29 +1,27 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './style.css';
 import RouterIconBig from '../../../assets/images/router-icon-big.png';
 import DownloadArrow from '../../../assets/images/arrow-dl.png';
 import UploadArrow from '../../../assets/images/arrow-up.png';
 import SmileyHappy from '../../../assets/images/smiley-happy.png';
 import DropdownArrow from '../../../assets/images/dropdown-arrow.png';
+import InfoWindowAcknowledge from './infoWindowAcknowledge';
 
 const InfoWindowContent = ({ }) => {
+  const [acknowledge, setAcknowledge] = useState(false);
   return (
     <div className="info-window-main">
       <div className="ui-info-window-header">
         <div className="ui-pseudo-flex"></div>
         <div className="ui-info-window-main-label">
-          <p>
-            Details
-        </p>
+          <p>Details</p>
         </div>
         <div className="ui-info-window-done-label">
-          <p>
-            Done
-        </p>
+          <p>Done</p>
         </div>
       </div>
       <div className="ui-info-window-body">
-        <div className="ui-info-window-router-row">
+        <div className="ui-info-window-router-row" onClick={() => setAcknowledge(true)}>
           <div className="router-image-container">
             <img className="router-image" src={RouterIconBig} alt="Router" />
           </div>
@@ -38,6 +36,10 @@ const InfoWindowContent = ({ }) => {
             </div>
           </div>
         </div>
+        {
+          acknowledge &&
+          <InfoWindowAcknowledge />
+        }
         <div className="ui-info-window-traffic-row">
           <div className="ui-info-window-row-label">
             <p>TRAFFIC</p>
