@@ -1,0 +1,261 @@
+ul, li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.ui-org-top-header {
+    height: 50px;
+}
+
+.ui-org-label {
+    text-align: center;
+    font-size: 13px;
+    font-weight: 600;
+    color: #777;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.ui-org-list {
+    margin: 0 8px 0 8px;
+}
+
+.ui-org-list li {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background: #fff;
+    border-radius: 10px;
+    border: 1px solid #f0f0f0;
+    padding: 16px;
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+
+.ui-list-image-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.ui-list-label-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.ui-list-info-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.ui-org-logo {
+    width: 30px;
+    height: 30px;
+    margin-right: 16px;
+}
+
+.ui-org-list-label {
+    color: #444;
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.ui-org-list-text {
+    margin-bottom: 2px;
+    color: #777777;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.ui-org-arrow {
+    margin-left: 15px;
+}
+
+/*
+!!!!!!!!!!!!!!!!!!!!!!!!
+*/
+
+.ui-account-header {
+    padding: 21px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 1px 0px #EEEEEE;
+}
+
+.ui-account-main-label {
+    font-weight: 600;
+    font-size: 17px;
+    text-align: center;
+    letter-spacing: -0.24px;
+    color: #444444;
+}
+
+.ui-account-cancel-label {
+    font-weight: 500;
+    font-size: 17px;
+    letter-spacing: -0.24px;
+    color: #5F72FF;
+}
+
+.ui-account-done-label {
+    font-weight: 600;
+    font-size: 17px;
+    letter-spacing: -0.24px;
+    color: #5F72FF;
+}
+
+.ui-account-wrapper {
+    padding-top: 45px;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.ui-account-list-label {
+    font-weight: 600;
+    font-size: 21px;
+    letter-spacing: 0.175px;
+    color: #444444;
+}
+
+.ui-account-image-wrapper {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #D5D5D5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+}
+
+.ui-account-list-blue {
+    font-weight: 500;
+    font-size: 15px;
+    text-align: right;
+    letter-spacing: -0.16px;
+    color: #5F72FF;
+}
+
+.ui-account-list {
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+.ui-account-list li {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background: #fff;
+    border-radius: 10px;
+    border: 1px solid #eee;
+    padding: 12px 20px 12px 20px;
+}
+
+.ui-account-profile-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.ui-list-label-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.ui-list-account-name {
+    font-weight: 600;
+    font-size: 15px;
+    letter-spacing: -0.16px;
+    color: #444444;
+}
+
+.ui-list-account-text {
+    font-weight: 500;
+    font-size: 13px;
+    letter-spacing: -0.06px;
+    color: #777777;
+}
+
+.ui-organization-list {
+    margin-top: 10px;
+    margin-bottom: 40px;
+}
+
+.ui-organization-list-label {
+    font-weight: 600;
+    font-size: 10px;
+    letter-spacing: 0.12px;
+    color: #777777;
+}
+
+.ui-organization-list li {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background: #fff;
+    border-radius: 10px;
+    border: 1px solid #eee;
+    padding: 11px 20px 11px 20px;
+}
+
+.ui-organization-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.ui-organization-name {
+    font-weight: 500;
+    font-size: 15px;
+    color: #444;
+    letter-spacing: -0.16px;
+}
+
+.ui-organization-logo-wrapper {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    color: #ffffff;
+    font-size: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+    margin-right: 7px;
+}
+
+.ui-org-logo-blue {
+    background-color: #5F72FF;
+}
+
+.ui-org-logo-green {
+    background-color: #6EE294;
+}
+
+.ui-org-logo-orange {
+    background-color: #FF993A;
+}
+
+.ui-multi-list li {
+    border-radius: 0;
+    border-bottom: 0;
+}
+
+.ui-multi-list li:first-of-type {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.ui-multi-list li:last-of-type {
+    border-bottom: 1px solid #eee;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}

@@ -1,7 +1,8 @@
 <html>
 
 <head>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="subscribers.css">
+    <link rel="stylesheet" href="networks.css">
     <title>Native</title>
 </head>
 
@@ -13,8 +14,8 @@
                 <p class="ui-logo-label">Smart Network</p>
             </div>
             <div class="ui-vertical-menu ui-menu-spacing">
-                <a href="#" class="active"><img src="img/Shape-3.png">Subscribers</a>
-                <a href="#"><img src="img/Shape-4.png">Networks</a>
+                <a href="subscribers.html" class="active"><img src="img/Shape-3.png">Subscribers</a>
+                <a href="networks.html"><img src="img/Shape-4.png">Networks</a>
                 <a href="#"><img src="img/Shape-5.png">ISP Plans</a>
                 <a href="#"><img src="img/Shape-1.png">Script Library</a>
                 <a href="#"><img src="img/Shape-2.png">Task Manager</a>
@@ -22,9 +23,13 @@
             </div>
             <div class="ui-vertical-menu">
                 <p class="ui-menu-label">SYSTEM</p>
-                <a href="#"><img src="img/Shape-7.png">Organizations</a>
+                <a href="organizations.html"><img src="img/Shape-7.png">Organizations</a>
                 <a href="#"><img src="img/Shape-8.png">Admins</a>
                 <a href="#"><img src="img/Shape.png">Support</a>
+            </div>
+            <div class="ui-user">
+                <img src="img/user.png" />
+                <p>ofer@valleyinternet.net</p>
             </div>
         </div>
         <!-- CENTER TOP HEADER AND BOXES -->
@@ -74,7 +79,7 @@
             <div class="ui-center-content">
                 <div id="utilization" class="ui-box ui-progress-box">
                     <div class="ui-utilization">
-                        <div>
+                        <div class="ui-utilization-labels">
                             <p>JUNE UTILIZATION</p>
                             <p>LIMIT: 35 GB</p>
                         </div>
@@ -84,245 +89,248 @@
                         </div>
                     </div>
                     <div class="ui-speed">
-                        <div class="ui-flex">
-                            <img src="damjan">
-                            <p>21.4 Mb/s</p>
-                            <div class="ui-meter ui-gradient-green ui-progress-bar-small">
-                                <span class="ui-progress-number">
+                        <div class="ui-speed-inner">
+                            <div class="ui-flex">
+                                <img src="img/arrow-dl.png" />
+                                <p class=" ui-speed-label-green ">21.4 Mb/s</p>
+                            </div>
+                            <div class="ui-progress-gradient ui-gradient-green ui-progress-bar-small ">
+                                <span class="ui-progress-number ">
                                     <p>1</p>
                                     <p>5</p>
                                     <p>20</p>
                                     </span>
-                                <span class="ui-progress-background"></span>
+                                <span class="ui-progress-background "></span>
                             </div>
                         </div>
-                        <div class="ui-flex">
-                            <img src="damjan">
-                            <p>21.4 Mb/s</p>
-                            <div class="ui-meter ui-gradient-green ui-progress-bar-small">
-                                <span class="ui-progress-number">
+                        <div class="ui-speed-inner ">
+                            <div class="ui-flex ">
+                                <img src="img/arrow-up.png">
+                                <p class="ui-speed-label-blue ">4.8 Mb/s</p>
+                            </div>
+                            <div class="ui-progress-gradient ui-gradient-blue ui-progress-bar-small ">
+                                <span class="ui-progress-number ">
                                     <p>1</p>
                                     <p>5</p>
                                     <p>20</p>
                                     </span>
-                                <span class="ui-progress-background"></span>
+                                <span class="ui-progress-background "></span>
                             </div>
                         </div>
                     </div>
                 </div>
-
-                <div id="info-bars" class="ui-box ui-info-box">
-                    <div class="ui-bar-container">
-                        <p class="ui-bar-container-label">OVERALL INTERNET HEALTH</p>
-                        <div class="ui-smiley-bar">
-                            <img class="ui-smiley-image" src="img/smiley.png">
-                            <div class="ui-bar-green">
+                <div id="info-bars " class="ui-box ui-info-box ">
+                    <div class="ui-bar-container ">
+                        <p class="ui-bar-container-label ">OVERALL INTERNET HEALTH</p>
+                        <div class="ui-smiley-bar ">
+                            <img class="ui-smiley-image " src="img/smiley.png ">
+                            <div class="ui-bar-green ">
                             </div>
-                            <div class="ui-bar-green">
+                            <div class="ui-bar-green ">
                             </div>
-                            <div class="ui-bar-green">
+                            <div class="ui-bar-green ">
                             </div>
-                            <div class="ui-bar-green">
+                            <div class="ui-bar-green ">
                             </div>
-                            <div class="ui-bar-green">
+                            <div class="ui-bar-green ">
                             </div>
-                            <div class="ui-bar-green">
+                            <div class="ui-bar-green ">
                             </div>
-                            <div class="ui-bar-green">
+                            <div class="ui-bar-green ">
                             </div>
-                            <div class="ui-bar-green">
+                            <div class="ui-bar-green ">
                             </div>
-                            <div class="ui-bar-green">
+                            <div class="ui-bar-green ">
                             </div>
-                            <div class="ui-bar-green">
+                            <div class="ui-bar-green ">
                             </div>
-                            <div class="ui-bar-green">
+                            <div class="ui-bar-green ">
                             </div>
-                            <div class="ui-bar-green">
+                            <div class="ui-bar-green ">
                             </div>
                         </div>
                     </div>
-                    <div class="ui-bar-container">
-                        <p class="ui-bar-container-label">SHORT TERM PACKET LOSS</p>
-                        <div class="ui-data-info">
+                    <div class="ui-bar-container ">
+                        <p class="ui-bar-container-label ">SHORT TERM PACKET LOSS</p>
+                        <div class="ui-data-info ">
                             <p>2%</p>
                             <p>0%</p>
                         </div>
-                        <div class="ui-data-bar">
-                            <div class="ui-bar-green">
+                        <div class="ui-data-bar ">
+                            <div class="ui-bar-green ">
                             </div>
-                            <div class="ui-bar-green">
+                            <div class="ui-bar-green ">
                             </div>
-                            <div class="ui-bar-green">
+                            <div class="ui-bar-green ">
                             </div>
-                            <div class="ui-bar-green">
+                            <div class="ui-bar-green ">
                             </div>
-                            <div class="ui-bar-green">
+                            <div class="ui-bar-green ">
                             </div>
-                            <div class="ui-bar-green">
+                            <div class="ui-bar-green ">
                             </div>
-                            <div class="ui-bar-green">
+                            <div class="ui-bar-green ">
                             </div>
-                            <div class="ui-bar-green">
+                            <div class="ui-bar-green ">
                             </div>
-                            <div class="ui-bar-green">
+                            <div class="ui-bar-green ">
                             </div>
-                            <div class="ui-bar-green">
+                            <div class="ui-bar-green ">
                             </div>
-                            <div class="ui-bar-green">
+                            <div class="ui-bar-green ">
                             </div>
-                            <div class="ui-bar-green">
+                            <div class="ui-bar-green ">
                             </div>
                         </div>
                     </div>
-                    <div class="ui-bar-container">
-                        <p class="ui-bar-container-label">LONG TERM PACKET LOSS</p>
-                        <div class="ui-data-info">
+                    <div class="ui-bar-container ">
+                        <p class="ui-bar-container-label ">LONG TERM PACKET LOSS</p>
+                        <div class="ui-data-info ">
                             <p>2%</p>
                             <p>0%</p>
                         </div>
-                        <div class="ui-data-bar">
-                            <div class="ui-bar-green">
+                        <div class="ui-data-bar ">
+                            <div class="ui-bar-green ">
                             </div>
-                            <div class="ui-bar-green">
+                            <div class="ui-bar-green ">
                             </div>
-                            <div class="ui-bar-green">
+                            <div class="ui-bar-green ">
                             </div>
-                            <div class="ui-bar-green">
+                            <div class="ui-bar-green ">
                             </div>
-                            <div class="ui-bar-green">
+                            <div class="ui-bar-green ">
                             </div>
-                            <div class="ui-bar-green">
+                            <div class="ui-bar-green ">
                             </div>
-                            <div class="ui-bar-green">
+                            <div class="ui-bar-green ">
                             </div>
-                            <div class="ui-bar-green">
+                            <div class="ui-bar-green ">
                             </div>
-                            <div class="ui-bar-green">
+                            <div class="ui-bar-green ">
                             </div>
-                            <div class="ui-bar-green">
+                            <div class="ui-bar-green ">
                             </div>
-                            <div class="ui-bar-green">
+                            <div class="ui-bar-green ">
                             </div>
-                            <div class="ui-bar-green">
+                            <div class="ui-bar-green ">
                             </div>
                         </div>
                     </div>
-                    <div class="ui-bar-container">
-                        <p class="ui-bar-container-label">LATENCY</p>
-                        <div class="ui-data-info">
+                    <div class="ui-bar-container ">
+                        <p class="ui-bar-container-label ">LATENCY</p>
+                        <div class="ui-data-info ">
                             <p>80 ms</p>
                             <p>20 ms</p>
                         </div>
-                        <div class="ui-data-bar">
-                            <div class="ui-bar-orange">
+                        <div class="ui-data-bar ">
+                            <div class="ui-bar-orange ">
                             </div>
-                            <div class="ui-bar-orange">
+                            <div class="ui-bar-orange ">
                             </div>
-                            <div class="ui-bar-orange">
+                            <div class="ui-bar-orange ">
                             </div>
-                            <div class="ui-bar-orange">
+                            <div class="ui-bar-orange ">
                             </div>
-                            <div class="ui-bar-orange">
+                            <div class="ui-bar-orange ">
                             </div>
-                            <div class="ui-bar-orange">
+                            <div class="ui-bar-orange ">
                             </div>
-                            <div class="ui-bar-orange">
+                            <div class="ui-bar-orange ">
                             </div>
-                            <div class="ui-bar-orange">
+                            <div class="ui-bar-orange ">
                             </div>
-                            <div class="ui-bar-orange">
+                            <div class="ui-bar-orange ">
                             </div>
-                            <div class="ui-bar-orange-empty">
+                            <div class="ui-bar-orange-empty ">
                             </div>
-                            <div class="ui-bar-orange-empty">
+                            <div class="ui-bar-orange-empty ">
                             </div>
-                            <div class="ui-bar-orange-empty">
+                            <div class="ui-bar-orange-empty ">
                             </div>
                         </div>
                     </div>
-                    <div class="ui-bar-container">
-                        <div class="ui-dot-container">
-                            <div class="ui-dot ui-dot-red">
+                    <div class="ui-bar-container ">
+                        <div class="ui-dot-container ">
+                            <div class="ui-dot ui-dot-red ">
                             </div>
                             <p>MTU</p>
                         </div>
-                        <div class="ui-dot-container">
-                            <div class="ui-dot ui-dot-red">
+                        <div class="ui-dot-container ">
+                            <div class="ui-dot ui-dot-red ">
                             </div>
                             <p>DNS 1</p>
                         </div>
-                        <div class="ui-dot-container">
-                            <div class="ui-dot ui-dot-green">
+                        <div class="ui-dot-container ">
+                            <div class="ui-dot ui-dot-green ">
                             </div>
                             <p>DNS 2</p>
                         </div>
                     </div>
                 </div>
 
-                <div id="bandwidth-usage" class="ui-box">
+                <div id="bandwidth-usage " class="ui-box ">
                     <h1>Bandwidth usage<br> Graph</h1>
                 </div>
 
-                <div id="data-transfer" class="ui-box">
+                <div id="data-transfer " class="ui-box ">
                     <h1>Data transfer<br> Graph</h1>
                 </div>
 
-                <div id="health" class="ui-box">
+                <div id="health " class="ui-box ">
                     <h1>Health<br> Graph</h1>
                 </div>
 
-                <div class="ui-column-break">
+                <div class="ui-column-break ">
                 </div>
 
-                <div id="map" class="ui-box">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d22658.491135757515!2d20.46694545!3d44.77445665!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2srs!4v1594291412484!5m2!1sen!2srs" width="100%" height="300" frameborder="0" allowfullscreen=""
-                        aria-hidden="false" tabindex="0"></iframe>
+                <div id="map " class="ui-box ">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d22658.491135757515!2d20.46694545!3d44.77445665!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2srs!4v1594291412484!5m2!1sen!2srs " width="100% " height="300
+                                    " frameborder="0 " allowfullscreen=" " aria-hidden="false " tabindex="0 "></iframe>
                 </div>
 
-                <div id="right-menu" class="vertical-menu-right ui-box">
-                    <a class="ui-green-item" href="#">
+                <div id="right-menu " class="vertical-menu-right ui-box ">
+                    <a class="ui-green-item " href="# ">
                         <p>Status</p>
                         <p>Active</p>
                     </a>
-                    <a class="ui-blue-item" href="#">
+                    <a class="ui-blue-item " href="# ">
                         <p>Acnowledge</p>
                         <p>Indefinitely</p>
                     </a>
-                    <a href="#">
+                    <a href="# ">
                         <p>Public IP</p>
                         <p>99.433.212.12</p>
                     </a>
-                    <a href="#">
+                    <a href="# ">
                         <p>Serial & IP</p>
                         <p>64FE345GD<br>172.231.121.1 </p>
                     </a>
-                    <a href="#">
+                    <a href="# ">
                         <p>Last Self Reg</p>
                         <p>39 minutes ago</p>
                     </a>
-                    <a href="#">
+                    <a href="# ">
                         <p>RouterOS</p>
                         <p>6.55.3</p>
                     </a>
-                    <a href="#">
+                    <a href="# ">
                         <p>RouterCRM</p>
                         <p>Miller-40222</p>
                     </a>
-                    <a href="#">
+                    <a href="# ">
                         <p>ISP Plan</p>
                         <p>Cloudhouse Fiberwave</p>
                     </a>
                 </div>
 
-                <div id="support-info" class="vertical-menu-right ui-box">
-                    <a class="ui-blue-item" href="#">
+                <div id="support-info " class="vertical-menu-right ui-box ">
+                    <a class="ui-blue-item " href="# ">
                         <p>Support Info</p>
                         <p>Hide</p>
                     </a>
-                    <p class="ui-support-info-text">Lorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsum</p>
-                    <a href="#">
-                        <p class="ui-blue-text">Share...</p>
+                    <p class="ui-support-info-text ">Lorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsum</p>
+                    <a href="# ">
+                        <p class="ui-blue-text ">Share...</p>
                     </a>
                 </div>
 
