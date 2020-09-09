@@ -15,7 +15,6 @@ function Networks() {
             <p>Smart Network</p>
           </div>
         </div>
-
       </div>
       <div className="ui-top-content">
         <TopContentSearch />

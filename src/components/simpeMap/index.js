@@ -3,9 +3,19 @@ import React from 'react';
 import './style.css';
 import InfoWindowContent from './infoWindowContent';
 import InfoWindowEx from './infoWindowEx';
-//import InfoWindowAcknowledge from './infoWindowContent/infoWindowAcknowledge';
 
 export class MapContainer extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      acknowledge: false
+    }
+  };
+
+  onWindowChange(acknowledge) {
+    this.setState(acknowledge);
+  };
+
   state = {
     showingInfoWindow: false,
     activeMarker: {},
@@ -30,22 +40,38 @@ export class MapContainer extends React.Component {
 
   render() {
     return (
-      <Map google={this.props.google} onClick={this.onMapClicked} zoom={14}>
-        <Marker onClick={this.onMarkerClick} name={'Example name'} />
+      <Map
+        google={this.props.google}
+        onClick={this.onMapClicked}
+        zoom={14}
+        initialCenter={{ lat: 44.776930, lng: 20.476100 }}>
+
+        <Marker onClick={this.onMarkerClick}
+          title={'Cafe Liberte'}
+          name={'Liberte'}
+          position={{ lat: 44.776319, lng: 20.475316 }} />
+
+        <Marker onClick={this.onMarkerClick}
+          title={'Cafe Escalera'}
+          name={'Escalera'}
+          position={{ lat: 44.784198, lng: 20.475534 }} />
+
+        <Marker onClick={this.onMarkerClick}
+          title={'Cafe Kangaroo'}
+          name={'Kangaroo'}
+          position={{ lat: 44.785436, lng: 20.468537 }} />
+
+        <Marker onClick={this.onMarkerClick}
+          title={'Auto parts store'}
+          name={'Euro Auto'}
+          position={{ lat: 44.785710, lng: 20.467780 }} />
+
         <InfoWindowEx className='ui-info-window'
           marker={this.state.activeMarker}
           visible={this.state.showingInfoWindow}>
           <InfoWindowContent />
         </InfoWindowEx>
-   
-        {/* <Marker onClick={this.onMarkerClick}
-          name={'SOMA'}
-          position={{ lat: 37.778519, lng: -122.405640 }} />
-          <InfoWindowEx className='ui-info-window'
-          marker={this.state.activeMarker}
-          visible={this.state.showingInfoWindow}>
-          <InfoWindowAcknowledge />
-        </InfoWindowEx> */}
+
       </Map>
     );
   }

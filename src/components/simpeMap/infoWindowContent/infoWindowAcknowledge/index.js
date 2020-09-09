@@ -1,17 +1,26 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './style.css';
 import CheckIconBlue from '../../../../assets/images/check-blue.png';
 import ArrowLeft from '../../../../assets/images/arrow-left.png';
 
-const InfoWindowAcknowledge = ({ }) => {
+function InfoWindowAcknowledge ({ parentStateSetter }) {
+
+  const [childState, setChildState] = useState(true);
+
+  useEffect(() => {
+    parentStateSetter(childState);
+  }, [parentStateSetter, childState]);
+
   return (
-    <div className="info-window-main">
+    <div className={"info-window-main"}>
       <div className="ui-info-window-header">
         <div className="ui-acknowledge-back">
           <div>
             <img className="ui-back-arrow" src={ArrowLeft} alt="Back arrow" />
           </div>
-          <div className="ui-acknowledge-window-back-label">
+          <div className="ui-acknowledge-window-back-label"  
+            value={childState}
+            onClick={() => setChildState(false)}>
             <p>Details</p>
           </div>
         </div>
@@ -29,7 +38,7 @@ const InfoWindowAcknowledge = ({ }) => {
               </div>
               <div className="acknowledge-value-wrapper">
                 <div className="acknowledge-row-value-text">
-                  <label class="form-switch">
+                  <label className="form-switch">
                     <input type="checkbox" />
                     <i></i>
                   </label>
