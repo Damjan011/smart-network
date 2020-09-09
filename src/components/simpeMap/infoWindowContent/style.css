@@ -1,9 +1,30 @@
 .info-window-main {
   width: 320px;
-  height: 100%;
+  height: 575px;
   background: #fafafa;
   box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.05);
   border-radius: 10px;
+  position: relative;
+  bottom: 309px;
+  left: 52px;
+}
+
+.info-window-main::after {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  content: '';
+  transform: rotate(45deg);
+  margin-top: -8px;
+  background: #ffffff;
+  z-index: 1;
+  border: 1px solid #f5eeee;
+  border-top: 0;
+  border-right: 0;
+  top: 50%;
+  left: 0;
+  margin-left: -15px;
+  margin-top: -15px;
 }
 
 .ui-info-window-header {
@@ -17,6 +38,8 @@
   position: sticky;
   top: 0;
   background: #fafafa;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
 }
 
 .ui-pseudo-flex {
