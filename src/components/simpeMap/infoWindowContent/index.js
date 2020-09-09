@@ -7,23 +7,21 @@ import SmileyHappy from '../../../assets/images/smiley-happy.png';
 import DropdownArrow from '../../../assets/images/dropdown-arrow.png';
 import InfoWindowAcknowledge from './infoWindowAcknowledge';
 
-const InfoWindowContent = ({ }) => {
-  const [acknowledge, setAcknowledge] = useState(false);
-  return (
-    <div className="info-window-main">
-      <div className="ui-info-window-header">
-        <div className="ui-pseudo-flex"></div>
-        <div className="ui-info-window-main-label">
-          <p>Details</p>
-        </div>
-        <div className="ui-info-window-done-label">
-          <p>Done</p>
-        </div>
+const FirstScreen = ({ onClick }) => (
+  <div>
+    <div className="ui-info-window-header">
+      <div className="ui-pseudo-flex"></div>
+      <div className="ui-info-window-main-label">
+        <p>Details</p>
       </div>
-      <div className="ui-info-window-body">
-        <div className="ui-info-window-router-row" onClick={() => setAcknowledge(true)}>
-          <div className="router-image-container">
-            <img className="router-image" src={RouterIconBig} alt="Router" />
+      <div className="ui-info-window-done-label">
+        <p>Done</p>
+      </div>
+    </div>
+    <div className="ui-info-window-body">
+      <div className="ui-info-window-router-row" onClick={() => onClick(true)}>
+            <div className="router-image-container">
+              <img className="router-image" src={RouterIconBig} alt="Router" />
           </div>
           <div>
             <div className="router-label-container">
@@ -36,10 +34,6 @@ const InfoWindowContent = ({ }) => {
             </div>
           </div>
         </div>
-        {
-          acknowledge &&
-          <InfoWindowAcknowledge />
-        }
         <div className="ui-info-window-traffic-row">
           <div className="ui-info-window-row-label">
             <p>TRAFFIC</p>
@@ -170,6 +164,21 @@ const InfoWindowContent = ({ }) => {
           </div>
         </div>
       </div>
+    </div>
+)
+
+const InfoWindowContent = ({ }) => {
+  const [acknowledge, setAcknowledge] = useState(false);
+  return (
+    <div className="info-window-main">
+      {
+        !acknowledge ? (
+          <FirstScreen onClick={setAcknowledge} />
+        ) : (
+          <InfoWindowAcknowledge />
+        )
+      }
+      
     </div>
   );
 }

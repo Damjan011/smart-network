@@ -7,6 +7,7 @@ export default class InfoWindowEx extends React.Component {
     super(props);
     this.infoWindowRef = React.createRef();
     this.contentElement = document.createElement(`div`);
+    this.contentElement.className = "MOJ-KURAC"
   }
 
   componentDidUpdate(prevProps) {
