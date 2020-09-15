@@ -17,7 +17,7 @@ const AnyReactComponent = ({ text }) => (
 export class MapContainer extends React.Component {
   render() {
     return (
-      <div style={{ height: '100vh', width: '100%' }}>
+      <div style={{ height: '650px', width: '100%' }}>
         <GoogleMapReact
           bootstrapURLKeys={{ key: "AIzaSyClhpytnSsGpLP5r6MFq05qM3iHHkuSSCI" }}
           defaultCenter={{
