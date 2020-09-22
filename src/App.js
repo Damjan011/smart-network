@@ -12,23 +12,6 @@ import {
   Link
 } from "react-router-dom";
 
-// {/* <nav>
-//   <ul>
-//     <li>
-//       <Link to="/">Home</Link>
-//     </li>
-//     <li>
-//       <Link to="/subscribers">Subscribers</Link>
-//     </li>
-//     <li>
-//       <Link to="/networks">Networks</Link>
-//     </li>
-//     <li>
-//       <Link to="/accounts">Accounts</Link>
-//     </li>
-//   </ul>
-// </nav> */}
-
 export default function App() {
   return (
     <Router>
