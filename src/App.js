@@ -3,7 +3,7 @@ import Home from './containers/home';
 import Subscribers from './containers/subscribers';
 import Networks from './containers/networks';
 import Accounts from './containers/accounts';
-import SmallLogo from './assets/images/Group.png'
+import SmallLogo from './assets/images/Group.png';
 import {
   BrowserRouter as Router,
   Switch,

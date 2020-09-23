@@ -16,7 +16,6 @@ console.log(data)
 
 const useSortableData = (items, config = null) => {
   const [sortConfig, setSortConfig] = React.useState(config);
-
   const sortedItems = React.useMemo(() => {
     let sortableItems = [...items];
     if (sortConfig !== null) {
@@ -32,7 +31,6 @@ const useSortableData = (items, config = null) => {
     }
     return sortableItems;
   }, [items, sortConfig]);
-
   const requestSort = (key) => {
     let direction = 'ascending';
     if (

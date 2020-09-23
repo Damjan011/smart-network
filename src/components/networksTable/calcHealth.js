@@ -1,67 +1,49 @@
 import React from 'react';
 
-const HealthBar = (primiHealth, primiStatus) => {
-  const health = Math.round(primiHealth.primiHealth / 20);
-  console.log(health);
-
-  const a = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-  const ShowRed = () => {
-    return (
-      <div className="ui-bar-red"></div>
-    )
-  };
-  const ShowOrange = () => {
-    return (
-      <div className="ui-bar-orange"></div>
-    )
-  };
-  const ShowYellow = () => {
-    return (
-      <div className="ui-bar-yellow"></div>
-    )
-  };
-  const ShowGreen = () => {
-    return (
-      <div className="ui-bar-green"></div>
-    )
-  };
-  if (health === 0) {
-    return (
-      <div className='ui-smiley-bar'>
-        <div>
-          <p>😰</p>
-        </div>
-        {a.map(e => (<ShowRed />))}
-      </div>
-    )
-  } else if (health === 1) {
-    return (
-      <div className='ui-smiley-bar'>
-        <div>
-          <p>🙁</p>
-        </div>
-        {a.map(e => (<ShowOrange />))}
-      </div>
-    )
-  } else if (health === 2 || health === 3) {
-    return (
-      <div className='ui-smiley-bar'>
-        <div>
-          <p>😐</p>
-        </div>
-        {a.map(e => (<ShowYellow />))}
-      </div>
-    )
-  } else if (health === 4 || health === 5) {
-    return (
-      <div className='ui-smiley-bar'>
-        <div>
-          <p>🙂</p>
-        </div>
-        {a.map(e => (<ShowGreen />))}
-      </div>
-    )
+const HealthBar = ({ primiHealth, primiStatus }) => {
+  const health = Math.round(primiHealth / 20);
+  const status = primiStatus;
+  const check = () => {
+    let sveee = [];
+    if (status === 'ack') {
+      sveee.push('ack', '😲', 8, 0);
+      return sveee;
+    } else if (health === 0) {
+      sveee.push('red', '😰', 2, 6);
+      return sveee;
+    } else if (health === 1) {
+      sveee.push('orange', '🙁', 4, 4);
+      return sveee;
+    } else if (health === 2 || health === 3) {
+      sveee.push('yellow', '😐', 6, 2);
+      return sveee;
+    } else if (health === 4 || health === 5) {
+      sveee.push('green', '🙂', 8, 0);
+      return sveee;
+    }
   }
+  const color = check()[0];
+  const smiley = check()[1];
+  const fullRows = check()[2];
+  const emptyRows = check()[3];
+
+  const displayRows = (numOfRows) => {
+    let counter = [];
+    for (let i = 0; i < numOfRows; i++) {
+      counter.push(numOfRows);
+    }
+    return counter;
+  }
+
+  return (
+    <div className='ui-smiley-bar'>
+      <div>
+        <p>{smiley}</p>
+      </div>
+      {displayRows(fullRows).map(element => <div className={`ui-bar-` + color}></div>)}
+      {displayRows(emptyRows).map(element => <div className={`ui-bar-` + color + `-empty`}></div>)}
+    </div>
+  )
 }
 
 export default HealthBar;
