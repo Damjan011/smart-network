@@ -22,6 +22,7 @@ const HealthBar = ({ primiHealth, primiStatus }) => {
       return sveee;
     }
   }
+
   const color = check()[0];
   const smiley = check()[1];
   const fullRows = check()[2];

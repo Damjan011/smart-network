@@ -7,6 +7,7 @@ import SubscribersMenu from '../../components/subscribersMenu';
 import SubscribersSupportInfo from '../../components/subscribersSupportInfo';
 import BandwidthGraph from '../../components/bandwidthGraph';
 import DataTransferGraph from '../../components/dataTransferGraph';
+import HealthGraph from '../../components/healthGraph';
 
 function Subscribers() {
   return (
@@ -21,9 +22,7 @@ function Subscribers() {
         <SubscribersHealthBars />
         <BandwidthGraph />
         <DataTransferGraph />
-        <div id="health" className="ui-box ">
-          <h1>Health<br /> Graph</h1>
-        </div>
+        <HealthGraph />
         <div className="ui-column-break ">
         </div>
         <SubscribersMap />
