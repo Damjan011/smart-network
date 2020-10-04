@@ -1,6 +1,6 @@
 /* @font-face {
-  font-family: "SF Text";
-  src: url("https://sf.abarba.me/SF-UI-Text-Regular.otf");
+  font-family: 'SF Pro Text';
+  src: local('SF Pro Text'), url(./fonts/damjan.ttf) format('truetype');
 } */
 
 body {
@@ -8,6 +8,7 @@ body {
   letter-spacing: 0.15px;
   color: #555;
   font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  /* font-family: 'SF Pro Text'; */
 }
 
 h2, h3, h1, p {
@@ -105,9 +106,9 @@ h2, h3, h1, p {
 .ui-top-content {
   background: #fafafa;
   width: 100%;
-  overflow: hidden;
   min-height: 100vh;
   margin-left: 220px;
+  overflow: hidden;
 }
 
 .ui-top-header {

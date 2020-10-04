@@ -5,9 +5,9 @@ import SubscribersUtilization from '../../components/subscribersUtilization';
 import SubscribersHealthBars from '../../components/subscribersHealthBars';
 import SubscribersMenu from '../../components/subscribersMenu';
 import SubscribersSupportInfo from '../../components/subscribersSupportInfo';
-import BandwidthGraph from '../../components/bandwidthGraph';
-import DataTransferGraph from '../../components/dataTransferGraph';
-import HealthGraph from '../../components/healthGraph';
+import BandwidthGraph from '../../components/graphs/bandwidthGraph';
+import DataTransferGraph from '../../components/graphs/dataTransferGraph';
+import HealthGraph from '../../components/graphs/healthGraph';
 
 function Subscribers() {
   return (
@@ -20,7 +20,7 @@ function Subscribers() {
       <div className="ui-center-content">
         <SubscribersUtilization />
         <SubscribersHealthBars />
-        <BandwidthGraph />
+        <BandwidthGraph/>
         <DataTransferGraph />
         <HealthGraph />
         <div className="ui-column-break ">
