@@ -137,8 +137,7 @@ const DataTransferGraph = ({ active, payload, label }) => {
           margin={{
             top: 0, right: -45, left: 0, bottom: 0,
           }}
-          data={data}
-        >
+          data={data}>
           <CartesianGrid strokeDasharray="2 2" />
           <XAxis tick={{ dx: 20 }} tickLine={false} dataKey="name" />
           <YAxis orientation='right' tickLine={false} type="number" domain={[0, 15]} />
