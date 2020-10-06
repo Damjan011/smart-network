@@ -132,7 +132,7 @@ class Tooltip extends PureComponent {
 
     if (this.wrapperNode && this.wrapperNode.getBoundingClientRect) {
       const box = this.wrapperNode.getBoundingClientRect();
-
+      console.log(box)
       if (Math.abs(box.width - boxWidth) > EPS || Math.abs(box.height - boxHeight) > EPS) {
         this.setState({
           boxWidth: box.width,
@@ -149,25 +149,28 @@ class Tooltip extends PureComponent {
 
   getTranslate = ({ key, tooltipDimension, viewBoxDimension }) => {
     const { allowEscapeViewBox, coordinate, offset, position, viewBox } = this.props;
+    
     if (position && isNumber(position[key])) {
       return position[key];
     }
+    console.log(coordinate[key] - tooltipDimension - offset)
 
     const restricted = coordinate[key] - tooltipDimension - offset;
     const unrestricted = coordinate[key] + offset;
+
     if (allowEscapeViewBox[key]) {
       return unrestricted;
     }
 
+    
     const tooltipBoundary = coordinate[key] + tooltipDimension + offset;
     const viewBoxBoundary = viewBox[key] + viewBoxDimension;
-    console.log(tooltipBoundary, viewBoxBoundary)
-    if (tooltipBoundary > viewBoxBoundary) {
-      return Math.max(restricted, viewBox[key]);
-
-    }
-    return Math.max(unrestricted, viewBox[key]);
     
+    if (tooltipBoundary > viewBoxBoundary) {  
+      return Math.max(restricted, viewBox[key]);
+    }
+    
+    return Math.max(unrestricted, viewBox[key]);   
   };
 
   render() {
@@ -185,23 +188,28 @@ class Tooltip extends PureComponent {
       ...wrapperStyle,
     };
     let translateX;
-
+    
     if (position && isNumber(position.x)) {
       translateX = position.x;
     } else {
       const { boxWidth, boxHeight } = this.state;
-
+      
       if (boxWidth > 0 && boxHeight > 0 && coordinate) {
         translateX = this.getTranslate({
           key: 'x',
           tooltipDimension: boxWidth,
           viewBoxDimension: viewBox.width,
         });
+        
 
       } else {
         outerStyle.visibility = 'hidden';
       }
     }
+
+    // const damjan = () => {
+    //   if translateX
+    // }
 
     outerStyle = {
       ...translateStyle({
@@ -210,10 +218,20 @@ class Tooltip extends PureComponent {
       ...outerStyle,
     };
 
+    // console.log('JA SAM X', coordinate.x)
+    
+
     const buraz = () => {
       if(coordinate.x < 150) {
         return 'eeeee'
       }}
+      // console.log(this.getTranslate())
+
+
+      if (isNumber(translateX) && 
+      coordinate && isNumber(coordinate.x) && translateX > coordinate.x) {
+        console.log('bogdan')
+      }
 
     return (
       <div
