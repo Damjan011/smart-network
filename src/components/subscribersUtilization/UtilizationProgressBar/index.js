@@ -1,10 +1,14 @@
 import React from 'react';
-import { isNumber } from '../../recharts/src/util/DataUtils';
 import './style.css';
 
 const UtilizationProgressBar = ({ limit, usage, month }) => {
-  const percentage = usage / limit * 100;
+  const percentage = (usage / limit) * 100;
   const percentageString = percentage + '%';
+  const isEmpty = () => {
+    if (limit === 0 || usage === 0 || limit === undefined || usage === undefined) {
+      return true;
+    }
+  }
   return (
     <div className="ui-utilization">
       <div className="ui-label-container">
@@ -17,7 +21,7 @@ const UtilizationProgressBar = ({ limit, usage, month }) => {
       </div>
       <div className="ui-progress-bar-big ui-progress-meter">
         {
-          isNumber(percentage) && (
+          !isEmpty() && (
             <div style={{ width: percentageString }} className="ui-progress-fill">
               <div className="ui-progress-big-number">
                 <p>{usage} GB</p>

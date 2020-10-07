@@ -135,7 +135,6 @@ class Tooltip extends PureComponent {
 
     if (this.wrapperNode && this.wrapperNode.getBoundingClientRect) {
       const box = this.wrapperNode.getBoundingClientRect();
-      console.log(box)
       if (Math.abs(box.width - boxWidth) > EPS || Math.abs(box.height - boxHeight) > EPS) {
         this.setState({
           boxWidth: box.width,
@@ -152,7 +151,7 @@ class Tooltip extends PureComponent {
 
   getTranslate = ({ key, tooltipDimension, viewBoxDimension }) => {
     const { allowEscapeViewBox, coordinate, offset, position, viewBox } = this.props;
-    
+
     if (position && isNumber(position[key])) {
       return position[key];
     }
@@ -161,24 +160,19 @@ class Tooltip extends PureComponent {
     const tooltipBoundary = coordinate[key] + tooltipDimension + offset;
     const viewBoxBoundary = viewBox[key] + viewBoxDimension;
 
-    let a;
-    let b = Math.max(unrestricted, viewBox[key]);
+    let isContain;
+    let totalPosition = Math.max(unrestricted, viewBox[key]);
 
-    if (tooltipBoundary - 180 > viewBoxBoundary) {    
-      a = true;
-      console.log('jeste overflow', a);
+    if (tooltipBoundary - 180 > viewBoxBoundary) {
+      isContain = true;
     }
     if (!allowEscapeViewBox[key]) {
       return {
         unrestricted,
-        a,
-        b,
+        isContain,
+        totalPosition,
       };
     }
-    // return {
-    //   a,
-    //   b,
-    // };
   };
 
   render() {
@@ -196,13 +190,13 @@ class Tooltip extends PureComponent {
       ...wrapperStyle,
     };
     let translateX;
-    let boban;
-    
+    let contain;
+
     if (position && isNumber(position.x)) {
       translateX.b = position.x;
     } else {
       const { boxWidth, boxHeight } = this.state;
-      
+
       if (boxWidth > 0 && boxHeight > 0 && coordinate) {
         translateX = this.getTranslate({
           key: 'x',
@@ -210,18 +204,16 @@ class Tooltip extends PureComponent {
           viewBoxDimension: viewBox.width,
         }).unrestricted;
 
-        boban = this.getTranslate({
+        contain = this.getTranslate({
           key: 'x',
           tooltipDimension: boxWidth,
           viewBoxDimension: viewBox.width,
-        }).a;
+        }).isContain;
 
       } else {
         outerStyle.visibility = 'hidden';
       }
     }
-
-    console.log('ja sam x objekat', translateX)
 
     outerStyle = {
       ...translateStyle({
@@ -231,14 +223,8 @@ class Tooltip extends PureComponent {
     };
 
     const cls = classNames(CLS_PREFIX, {
-      [`${CLS_PREFIX}-right`]: coordinate && isNumber(coordinate.x) && boban === true,
+      [`${CLS_PREFIX}-contain`]: coordinate && isNumber(coordinate.x) && contain === true,
     })
-
-    const pupak = () => {
-      if (boban) {
-        return 'picka';
-      }
-    }
 
     return (
       <div

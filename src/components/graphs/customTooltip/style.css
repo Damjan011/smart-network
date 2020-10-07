@@ -4,11 +4,11 @@
 
 }
 
-.recharts-tooltip-wrapper-right {
+.recharts-tooltip-wrapper-contain {
   left: -200px !important;
 }
 
-.recharts-tooltip-wrapper-right .ui-tooltip-line {
+.recharts-tooltip-wrapper-contain .ui-tooltip-line {
   left: 189px
 }
 
