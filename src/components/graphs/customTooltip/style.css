@@ -4,6 +4,14 @@
 
 }
 
+.recharts-tooltip-wrapper-right {
+  left: -200px !important;
+}
+
+.recharts-tooltip-wrapper-right .ui-tooltip-line {
+  left: 189px
+}
+
 .custom-tooltip {
   background: black;
   width: 200px;

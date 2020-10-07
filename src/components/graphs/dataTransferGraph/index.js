@@ -1,8 +1,8 @@
 import React from 'react';
-import { BarChart, Bar, XAxis, YAxis, CartesianGrid, ResponsiveContainer } from 'recharts';
+import { BarChart, Bar, XAxis, YAxis, CartesianGrid, ResponsiveContainer, Tooltip } from 'recharts';
 import './style.css';
 import CustomTooltip from '../customTooltip';
-import Tooltip from '../../recharts/src/component/Tooltip';
+// import Tooltip from '../../recharts/src/component/Tooltip';
 
 const newData = [
   {
@@ -160,7 +160,7 @@ const DataTransferGraph = ({ active, payload, label }) => {
           <CartesianGrid strokeDasharray="2 2" />
           <XAxis tick={{ dx: 20 }} interval={0} tickLine={false} tickFormatter={hourFormatter} dataKey='timestamp' />
           <YAxis orientation='right' tickLine={false} type="number" domain={[0, 15]} />
-          <Tooltip position={{ y: -115 }} cursor={false} allowEscapeViewBox={{ x: true, y: true }} content={<CustomTooltip label={label} payload={payload} active={active} />} />
+          <Tooltip position={{ y: -115 }} cursor={false} allowEscapeViewBox={{ x: false, y: true }} content={<CustomTooltip label={label} payload={payload} active={active} />} />
           <Bar barSize={5} dataKey="rx" stackId="a" fill="#5F72FF" />
           <Bar barSize={5} dataKey="tx" stackId="a" fill="#6EE294" />
         </BarChart>

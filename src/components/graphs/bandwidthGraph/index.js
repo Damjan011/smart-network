@@ -4,53 +4,6 @@ import { LineChart, Line, XAxis, YAxis, CartesianGrid, ResponsiveContainer } fro
 import CustomTooltip from '../customTooltip';
 import Tooltip from '../../recharts/src/component/Tooltip';
 
-const obj = [
-  {
-    dn: "tx",
-    rx: 1,
-    time: "17:49:29",
-    timestamp: 1601747369171,
-    timestamp_rx: 1601747100000,
-    timestamp_tx: 1601747100000,
-    top_user: null,
-    tx: 2,
-    up: "rx",
-  },
-  {
-    dn: "tx",
-    rx: 2,
-    time: "17:59:29",
-    timestamp: 1601747969171,
-    timestamp_rx: 1601747700000,
-    timestamp_tx: 1601747700000,
-    top_user: null,
-    tx: 1,
-    up: "rx",
-  },
-  {
-    dn: "tx",
-    rx: 6,
-    time: "18:09:29",
-    timestamp: 1601748569171,
-    timestamp_rx: 1601748300000,
-    timestamp_tx: 1601748300000,
-    top_user: null,
-    tx: 4,
-    up: "rx",
-  },
-  {
-    dn: "tx",
-    rx: 7,
-    time: "18:19:29",
-    timestamp: 1601749169171,
-    timestamp_rx: 1601749500000,
-    timestamp_tx: 1601749500000,
-    top_user: null,
-    tx: 6,
-    up: "rx",
-  }
-];
-
 const newData = [
   {
     dn: "tx",
@@ -266,7 +219,7 @@ const BandwidthGraph = ({ active, payload, label }) => {
           <CartesianGrid strokeDasharray="3 3" />
           <XAxis allowDataOverflow={true} interval={damjan()} tickFormatter={hourFormatter} tick={{ dx: 20 }} tickLine={false} dataKey='timestamp' />
           <YAxis tick={{ dy: 0 }} tickLine={false} orientation="right" type="number" domain={[0, 8]} />
-          <Tooltip position={{ y: -115 }} cursor={false} allowEscapeViewBox={{ x: true, y: false }} content={<CustomTooltip label={label} payload={payload} active={active} />} />
+          <Tooltip position={{ y: -115 }} cursor={false} content={<CustomTooltip label={label} payload={payload} active={active} />} />
           <Line dataKey="rx" stroke="#6EE294" strokeWidth="4" dot={false} activeDot={false} />
           <Line dataKey="tx" stroke="#5F72FF" strokeWidth="4" dot={false} activeDot={false} />
         </LineChart>

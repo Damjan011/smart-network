@@ -2,9 +2,12 @@ import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import { translateStyle } from 'react-smooth';
 import _ from 'lodash';
+import classNames from 'classnames';
 import DefaultTooltipContent from './DefaultTooltipContent';
 import { TOOLTIP_TYPES, isSsr } from '../util/ReactUtils';
 import { isNumber } from '../util/DataUtils';
+
+const CLS_PREFIX = 'recharts-tooltip-wrapper';
 
 const EPS = 1;
 
@@ -153,24 +156,29 @@ class Tooltip extends PureComponent {
     if (position && isNumber(position[key])) {
       return position[key];
     }
-    console.log(coordinate[key] - tooltipDimension - offset)
 
-    const restricted = coordinate[key] - tooltipDimension - offset;
     const unrestricted = coordinate[key] + offset;
-
-    if (allowEscapeViewBox[key]) {
-      return unrestricted;
-    }
-
-    
     const tooltipBoundary = coordinate[key] + tooltipDimension + offset;
     const viewBoxBoundary = viewBox[key] + viewBoxDimension;
-    
-    if (tooltipBoundary > viewBoxBoundary) {  
-      return Math.max(restricted, viewBox[key]);
+
+    let a;
+    let b = Math.max(unrestricted, viewBox[key]);
+
+    if (tooltipBoundary - 180 > viewBoxBoundary) {    
+      a = true;
+      console.log('jeste overflow', a);
     }
-    
-    return Math.max(unrestricted, viewBox[key]);   
+    if (!allowEscapeViewBox[key]) {
+      return {
+        unrestricted,
+        a,
+        b,
+      };
+    }
+    // return {
+    //   a,
+    //   b,
+    // };
   };
 
   render() {
@@ -188,9 +196,10 @@ class Tooltip extends PureComponent {
       ...wrapperStyle,
     };
     let translateX;
+    let boban;
     
     if (position && isNumber(position.x)) {
-      translateX = position.x;
+      translateX.b = position.x;
     } else {
       const { boxWidth, boxHeight } = this.state;
       
@@ -199,17 +208,20 @@ class Tooltip extends PureComponent {
           key: 'x',
           tooltipDimension: boxWidth,
           viewBoxDimension: viewBox.width,
-        });
-        
+        }).unrestricted;
+
+        boban = this.getTranslate({
+          key: 'x',
+          tooltipDimension: boxWidth,
+          viewBoxDimension: viewBox.width,
+        }).a;
 
       } else {
         outerStyle.visibility = 'hidden';
       }
     }
 
-    // const damjan = () => {
-    //   if translateX
-    // }
+    console.log('ja sam x objekat', translateX)
 
     outerStyle = {
       ...translateStyle({
@@ -218,28 +230,22 @@ class Tooltip extends PureComponent {
       ...outerStyle,
     };
 
-    // console.log('JA SAM X', coordinate.x)
-    
+    const cls = classNames(CLS_PREFIX, {
+      [`${CLS_PREFIX}-right`]: coordinate && isNumber(coordinate.x) && boban === true,
+    })
 
-    const buraz = () => {
-      if(coordinate.x < 150) {
-        return 'eeeee'
-      }}
-      // console.log(this.getTranslate())
-
-
-      if (isNumber(translateX) && 
-      coordinate && isNumber(coordinate.x) && translateX > coordinate.x) {
-        console.log('bogdan')
+    const pupak = () => {
+      if (boban) {
+        return 'picka';
       }
+    }
 
     return (
       <div
-        className='recharts-tooltip-wrapper'
+        className={cls}
         style={outerStyle}
         ref={(node) => { this.wrapperNode = node; }}
       >
-        <div className={buraz()}></div>
         {renderContent(content, { ...this.props, payload: finalPayload })}
       </div>
     );
