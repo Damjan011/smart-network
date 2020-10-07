@@ -211,8 +211,8 @@ const BandwidthGraph = ({ active, payload, label }) => {
         </div>
       </div>
       <ResponsiveContainer width='100%' height={180}>
-        <LineChart
-          margin={{
+        <LineChart className="hide-last-tick"
+          margin={{ 
             top: 0, right: -45, left: 0, bottom: 0,
           }}
           data={newData}>
