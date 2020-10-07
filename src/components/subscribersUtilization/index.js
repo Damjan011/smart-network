@@ -5,9 +5,8 @@ import UploadArrow from '../../assets/images/arrow-up.png';
 import UtilizationProgressBar from './UtilizationProgressBar';
 
 const SubscribersUtilization = ({ }) => (
-
   <div id="utilization" className="ui-box ui-progress-box">
-    <UtilizationProgressBar limit={222} usage={50} month={'june'}/>
+    <UtilizationProgressBar limit={444} usage={443} month={'june'}/>
     <div className="ui-speed">
       <div className="ui-speed-inner">
         <div className="ui-speed-value-container">

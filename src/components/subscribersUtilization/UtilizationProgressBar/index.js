@@ -9,6 +9,16 @@ const UtilizationProgressBar = ({ limit, usage, month }) => {
       return true;
     }
   }
+  const isCapped = () => {
+    if (usage >= limit) {
+      return true;
+    }
+  }
+  const usageRightDisplay = () => {
+    if (percentage < 20) {
+      return true;
+    }
+  }
   return (
     <div className="ui-utilization">
       <div className="ui-label-container">
@@ -19,17 +29,19 @@ const UtilizationProgressBar = ({ limit, usage, month }) => {
           <p>LIMIT: {limit} GB</p>
         </div>
       </div>
-      <div className="ui-progress-bar-big ui-progress-meter">
-        {
-          !isEmpty() && (
-            <div style={{ width: percentageString }} className="ui-progress-fill">
-              <div className="ui-progress-big-number">
-                <p>{usage} GB</p>
+      <div className={isCapped() ? 'ui-capped-meter' : ''}>
+        <div className=" ui-progress-bar-big ui-progress-meter">
+          {
+            !isEmpty() && (
+              <div style={{ width: percentageString }} className="ui-progress-fill">
+                <div className={!usageRightDisplay() ? 'ui-progress-big-number' : 'ui-progress-big-number-right-display'}>
+                  <p>{usage} GB</p>
+                </div>
+                <div style={isCapped() ? { display: 'none' } : {}} className="ui-progress-end"></div>
               </div>
-              <div className="ui-progress-end"></div>
-            </div>
-          )
-        }
+            )
+          }
+        </div>
       </div>
     </div>
   )

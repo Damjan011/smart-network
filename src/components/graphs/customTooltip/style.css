@@ -1,7 +1,6 @@
 .recharts-tooltip-wrapper {
   left: -120px !important;
   z-index: 10;
-
 }
 
 .recharts-tooltip-wrapper-contain {
@@ -19,7 +18,6 @@
   color: white;
   left: -100px;
   padding: 8px 11px 8px 11px;
-
 }
 
 .ui-tooltip-top {

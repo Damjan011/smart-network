@@ -21,6 +21,7 @@
 .ui-progress-bar-big {
   display: flex;
   align-items: center;
+  width: 100%;
 }
 
 .ui-progress-meter {
@@ -31,6 +32,29 @@
   border-radius: 100px;
   border: 1px solid #d9d9d9;
   box-sizing: border-box;
+  width: 100%;
+  z-index: 2;
+}
+
+.ui-capped-meter {
+  display: flex;
+  align-items: center;
+}
+
+.ui-capped-meter::after {
+  width: 17px;
+  height: 12px;
+  content: '';
+  background: #FF3563;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  margin-left: -10px;
+  -moz-border-radius: 100px;
+  -webkit-border-radius: 100px;
+  border-radius: 100px;
+}
+
+.ui-capped-meter .ui-progress-meter {
+  overflow: hidden;
 }
 
 .ui-progress-fill {
@@ -48,6 +72,15 @@
   font-weight: 500;
   font-size: 10px;
   color: #fff;
+  font-style: normal;
+  letter-spacing: 0.12px;
+}
+
+.ui-progress-big-number-right-display {
+  margin-right: -40px;
+  color: #979797;
+  font-weight: 500;
+  font-size: 10px;
   font-style: normal;
   letter-spacing: 0.12px;
 }
