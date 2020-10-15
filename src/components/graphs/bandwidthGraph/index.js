@@ -192,9 +192,6 @@ const data = [
 ];
 
 const BandwidthGraph = ({ active, payload, label }) => {
-  const damjan = () => {
-    return 0;
-  }
   return (
     <div id="bandwidth-usage" className="ui-box" style={{ padding: '20px', overflow: 'visible' }}>
       <div className="ui-graph-labels">
@@ -217,7 +214,7 @@ const BandwidthGraph = ({ active, payload, label }) => {
           }}
           data={newData}>
           <CartesianGrid strokeDasharray="3 3" />
-          <XAxis allowDataOverflow={true} interval={damjan()} tickFormatter={hourFormatter} tick={{ dx: 20 }} tickLine={false} dataKey='timestamp' />
+          <XAxis allowDataOverflow={true} interval={0} tickFormatter={hourFormatter} tick={{ dx: 20 }} tickLine={false} dataKey='timestamp' />
           <YAxis tick={{ dy: 0 }} tickLine={false} orientation="right" type="number" domain={[0, 8]} />
           <Tooltip position={{ y: -115 }} cursor={false} content={<CustomTooltip label={label} payload={payload} active={active} />} />
           <Line dataKey="rx" stroke="#6EE294" strokeWidth="4" dot={false} activeDot={false} />

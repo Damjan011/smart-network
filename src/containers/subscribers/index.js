@@ -20,7 +20,7 @@ function Subscribers() {
       <div className="ui-center-content">
         <SubscribersUtilization />
         <SubscribersHealthBars />
-        <BandwidthGraph/>
+        <BandwidthGraph />
         <DataTransferGraph />
         <HealthGraph />
         <div className="ui-column-break ">
