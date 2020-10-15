@@ -3,6 +3,7 @@ import Home from './containers/home';
 import Subscribers from './containers/subscribers';
 import Networks from './containers/networks';
 import Accounts from './containers/accounts';
+import Speedtest from './containers/speedtest';
 import SmallLogo from './assets/images/Group.png';
 import {
   BrowserRouter as Router,
@@ -66,6 +67,10 @@ class App extends React.Component {
                 <img src={require("./assets/images/Shape-6.png")} alt="Preferences icon" />
                 <p>Preferences</p>
               </Link>
+              <NavLink activeClassName="active" to="/speedtest" >
+                <img src={require("./assets/images/Shape-4.png")} alt="Networks icon" />
+                <p>Speedtest</p>
+              </NavLink>
               <div class="ui-vertical-menu">
                 <p class="ui-menu-label">SYSTEM</p>
                 <NavLink activeClassName="active" to="/accounts" >
@@ -100,6 +105,9 @@ class App extends React.Component {
             </Route>
             <Route path="/networks">
               <Networks />
+            </Route>
+            <Route path="/speedtest">
+              <Speedtest />
             </Route>
             <Route path="/">
               <Home />

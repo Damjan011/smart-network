@@ -7,14 +7,12 @@ import SwitchAccountsList from '../../components/switchAccountsList';
 
 function Accounts() {
   return (
-    <div className="ui-layout">
-      <div className="ui-top-content">
-        <AccountsHeader />
-        <div className="ui-account-wrapper">
-          <ActiveAccountsList />
-          <AccountOrganizationsList />
-          <SwitchAccountsList />  
-        </div>
+    <div className="ui-top-content">
+      <AccountsHeader />
+      <div className="ui-account-wrapper">
+        <ActiveAccountsList />
+        <AccountOrganizationsList />
+        <SwitchAccountsList />
       </div>
     </div>
   );
