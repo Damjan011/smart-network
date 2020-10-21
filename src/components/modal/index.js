@@ -7,7 +7,7 @@ const Modal = ({ }) => (
     <div className="ui-modal-header">
       <div className="ui-modal-cancel-label">
         <p>
-          Cancel
+          Cancel, test
         </p>
       </div>
       <div className="ui-modal-main-label">
