@@ -3,6 +3,8 @@ import './style.css';
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, ResponsiveContainer } from 'recharts';
 import CustomTooltip from '../customTooltip';
 import Tooltip from '../../recharts/src/component/Tooltip';
+import svgToPng from './svgToPng';
+import ReactDOM from 'react-dom';
 
 const newData = [
   {
@@ -134,64 +136,49 @@ const hourFormatter = (tickTimestamp) => {
   return fullHours;
 }
 
-const data = [
-  {
-    name: '12 AM', uv: 3, pv: 2, amt: 2400,
-  },
-  {
-    name: '3 AM', uv: 3.5, pv: 2.1, amt: 2210,
-  },
-  {
-    name: '6 AM', uv: 5, pv: 2.8, amt: 2290,
-  },
-  {
-    name: '9 AM', uv: 4.4, pv: 2.4, amt: 2000,
-  },
-  {
-    name: '12 PM', uv: 3, pv: 1.9, amt: 2181,
-  },
-  {
-    name: '3 PM', uv: 3.3, pv: 2, amt: 2500,
-  },
-  {
-    name: '6 PM', uv: 5, pv: 2.5, amt: 2100,
-  },
-  {
-    name: '9 PM', uv: 5, pv: 2.5, amt: 2100,
-  },
-  {
-    name: '12 AM', uv: 6.5, pv: 3, amt: 2400,
-  },
-  {
-    name: '3 AM', uv: 5, pv: 2.7, amt: 2210,
-  },
-  {
-    name: '6 AM', uv: 4.2, pv: 2.1, amt: 2290,
-  },
-  {
-    name: '9 AM', uv: 2, pv: 1.9, amt: 2000,
-  },
-  {
-    name: '12 PM', uv: 3.2, pv: 2.1, amt: 2181,
-  },
-  {
-    name: '3 PM', uv: 7, pv: 3, amt: 2500,
-  },
-  {
-    name: '6 PM', uv: 5, pv: 2.5, amt: 2100,
-  },
-  {
-    name: '9 PM', uv: 6, pv: 2.6, amt: 2100,
-  },
-  {
-    name: '3 PM', uv: 4.1, pv: 2.2, amt: 2500,
-  },
-  {
-    name: '6 PM', uv: 6, pv: 3, amt: 2100,
-  },
-];
+// const exportChart = () => {
+
+//   // Output image size
+//   const WIDTH = 900;
+//   const HEIGHT = 250;
+
+//   const convertChart = async (ref) => {
+
+//       if (ref && ref.container) {
+//           let svg = ref.container.children[0];
+//           let pngData = await svgToPng(svg, WIDTH, HEIGHT);
+//           console.log('Do what you need with PNG', pngData);
+//       }
+//   };
+
+//   const chart = <LineChart  width={WIDTH} height={HEIGHT}
+//       ref={ref => convertChart(ref)} />;
+
+//   // Render chart component into helper div
+//   const helperDiv = document.createElement('tmp');
+//   ReactDOM.render(chart, helperDiv);
+// }
+const WIDTH = 125;
+  const HEIGHT = 50;
+const convertChart = async (ref) => {
+
+  if (ref && ref.container) {
+      let svg = ref.container.children[0];
+      let pngData = await svgToPng(svg, WIDTH, HEIGHT);
+      console.log('Do what you need with PNG', pngData);
+      return (
+        <div>
+          {pngData}
+        </div>
+      )
+  }
+};
 
 const BandwidthGraph = ({ active, payload, label }) => {
+  
+
+
+  
   return (
     <div id="bandwidth-usage" className="ui-box" style={{ padding: '20px', overflow: 'visible' }}>
       <div className="ui-graph-labels">
@@ -212,7 +199,8 @@ const BandwidthGraph = ({ active, payload, label }) => {
           margin={{ 
             top: 0, right: -45, left: 0, bottom: 0,
           }}
-          data={newData}>
+          data={newData} 
+          ref={ref => convertChart(ref)}>
           <CartesianGrid strokeDasharray="3 3" />
           <XAxis allowDataOverflow={true} interval={0} tickFormatter={hourFormatter} tick={{ dx: 20 }} tickLine={false} dataKey='timestamp' />
           <YAxis tick={{ dy: 0 }} tickLine={false} orientation="right" type="number" domain={[0, 8]} />
@@ -221,6 +209,7 @@ const BandwidthGraph = ({ active, payload, label }) => {
           <Line dataKey="tx" stroke="#5F72FF" strokeWidth="4" dot={false} activeDot={false} />
         </LineChart>
       </ResponsiveContainer>
+      
     </div>
   );
 }

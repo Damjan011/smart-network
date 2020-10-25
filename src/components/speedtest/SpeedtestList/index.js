@@ -39,10 +39,6 @@ const SpeedtestList = ({ }) => (
         <p>Speed test run by agent are not visible for subscriber in subscriber app.</p>
       </div>
     </div>
-
-
-
-
     <ul className="ui-speedtest-list ui-multi-list">
       <li>
         <div className="ui-speedtest-date">

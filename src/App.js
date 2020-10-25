@@ -12,6 +12,7 @@ import {
   NavLink,
   Link
 } from "react-router-dom";
+import RouterTraffic from './containers/routerTraffic';
 
 class App extends React.Component {
   constructor(props) {
@@ -71,6 +72,10 @@ class App extends React.Component {
                 <img src={require("./assets/images/Shape-4.png")} alt="Networks icon" />
                 <p>Speedtest</p>
               </NavLink>
+              <NavLink activeClassName="active" to="/routerTraffic" >
+                <img src={require("./assets/images/Shape-4.png")} alt="Networks icon" />
+                <p>Router Traffic</p>
+              </NavLink>
               <div class="ui-vertical-menu">
                 <p class="ui-menu-label">SYSTEM</p>
                 <NavLink activeClassName="active" to="/accounts" >
@@ -108,6 +113,9 @@ class App extends React.Component {
             </Route>
             <Route path="/speedtest">
               <Speedtest />
+            </Route>
+            <Route path="/routerTraffic">
+              <RouterTraffic />
             </Route>
             <Route path="/">
               <Home />
