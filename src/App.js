@@ -15,26 +15,11 @@ import {
 import RouterTraffic from './containers/routerTraffic';
 
 class App extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { apiResponse: "" };
-  }
-
-  callAPI() {
-    fetch("http://localhost:9000/testAPI")
-      .then(res => res.text())
-      .then(res => this.setState({ apiResponse: res }));
-  }
-
-  componentWillMount() {
-    this.callAPI();
-  }
   render() {
     return (
       <Router>
         <div className="ui-layout">
           <div className="ui-sidebar">
-    <p>{this.state.apiResponse}</p>
             <div className="ui-logo-box">
               <div className="ui-logo-wrapper">
                 <img className="ui-logo-small" alt="Small logo" src={SmallLogo} />
