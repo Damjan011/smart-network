@@ -1,7 +1,10 @@
 import React from 'react';
-import { LineChart, Line, XAxis, YAxis, CartesianGrid, ResponsiveContainer } from 'recharts';
+import './style.css';
+import { LineChart, Brush, Tooltip, Line, YAxis, XAxis, CartesianGrid } from 'recharts';
 import CustomTooltip from '../customTooltip';
-import Tooltip from '../../recharts/src/component/Tooltip';
+import {useHorizontalScroll} from './burazengija';
+//import Brush from '../../recharts/src/cartesian/Brush';
+//import Tooltip from '../../recharts/src/component/Tooltip';
 
 const newData = [
   {
@@ -134,8 +137,9 @@ const hourFormatter = (tickTimestamp) => {
 }
 
 const HealthGraph = ({ active, payload, label }) => {
+  const scrollRef = useHorizontalScroll();
   return (
-    <div id="health" className="ui-box" style={{ padding: '20px', overflow: 'visible' }}>
+    <div id="health" ref={scrollRef} className="ui-box example" style={{ padding: '20px', overflowX: 'auto' }}>
       <div className="ui-graph-labels">
         <div className="ui-graph-labels-inner">
           <div className="ui-graph-main-label">
@@ -149,20 +153,21 @@ const HealthGraph = ({ active, payload, label }) => {
           <p>24 Jan 2020</p>
         </div>
       </div>
-      <ResponsiveContainer width='100%'
-        height={180}>
-        <LineChart
+        <LineChart height={180} width={700}
           margin={{
             top: 0, right: -45, left: 0, bottom: 0,
           }}
-          data={newData}>
+          data={newData}
+          ref={scrollRef}>
           <CartesianGrid position="right" strokeDasharray="3 3" />
           <XAxis tick={{ dx: 20 }} tickFormatter={hourFormatter} interval={0} tickLine={false} dataKey='timestamp' />
-          <YAxis tickLine={false} orientation="right" type="number" domain={[0, 8]} />
+     
+          <YAxis style={{position: 'fixed'}} tickLine={false} orientation="right" type="number" domain={[0, 8]} />
+
           <Tooltip position={{ y: -115 }} cursor={false} allowEscapeViewBox={{ x: false, y: true }} content={<CustomTooltip label={label} payload={payload} active={active} />} />
+          <Brush dataKey="rx" height={30} stroke="#8884d8" />
           <Line dataKey="rx" stroke="#5F72FF" strokeWidth="4" dot={false} activeDot={false} />
         </LineChart>
-      </ResponsiveContainer>
     </div>
   );
 }

@@ -1,8 +1,8 @@
 import React from 'react';
-import { BarChart, Bar, XAxis, YAxis, CartesianGrid, ResponsiveContainer } from 'recharts';
+import { BarChart, Tooltip, Bar, XAxis, YAxis, CartesianGrid, ResponsiveContainer } from 'recharts';
 import './style.css';
 import CustomTooltip from '../customTooltip';
-import Tooltip from '../../recharts/src/component/Tooltip';
+//import Tooltip from '../../recharts/src/component/Tooltip';
 
 const newData = [
   {

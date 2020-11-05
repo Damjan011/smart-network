@@ -48,6 +48,8 @@
   display: flex;
   align-items: center;
   justify-content: flex-start;
+  flex: 4;
+  min-width: 165px;
 }
 
 .router-traffic-list-image-wrapper {
@@ -71,12 +73,23 @@
   color: #444;
   font-weight: 600;
   margin-left: 10px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 75%;
+}
+
+.router-traffic-list-label p {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 .router-graph-arrow-wrapper {
   display: flex;
   align-items: center;
   justify-content: flex-end;
+  flex: 1;
 }
 
 .router-graph {
@@ -97,283 +110,11 @@
 
 /**/
 
-.service-column-full {
-  height: 100vh;
-  width: 66.66%;
-  padding-top: 50px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
 
-/* .service-column-full-inner {
-  max-width: 450px;
-} */
-
-.service-image-label-container {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-}
-
-.service-image-container {
-  width: 50px;
-  height: 50px;
-  border: 1px solid #ddd;
-  background-color: #fff;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.service-image {
-
-}
-
-.service-label {
-  color: #444;
-  font-size: 15px;
-  font-weight: 600;
-  margin-left: 10px;
-}
-
-.service-box {
-  background: #fff;
-  border-radius: 10px;
-  border: 1px solid #eee;
-  padding: 25px;
-}
-
-.service-gray-label {
-  font-size: 10px;
-  font-weight: 600;
-  color: #777;
-  margin-top: 25px;
-  margin-bottom: 10px;
-}
-
-.reveal-data-text {
-  font-weight: 500;
-  font-size: 15px;
-  color: #444;
-  text-align: center;
-  line-height: 22px;
-  margin-bottom: 20px;
-}
-
-.request-lan-button {
-  background: #eee;
-  border-radius: 10px;
-  color: #5F72FF;
-  font-weight: 500;
-  font-size: 17px;
-  padding: 12px 20px 12px 20px;
-  text-align: center;
-}
-
-.ask-customer-label {
-  font-size: 10px;
-  font-weight: 400;
-  color: #777;
-  margin-top: 5px;
-}
-
-.service-list {
-  margin-top: 20px;
-}
-
-.service-list li {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background: #fff;
-  border: 1px solid #eee;
-  border-bottom: none;
-  padding: 12px 20px 12px 20px;
-}
-
-.service-list li:first-of-type {
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-}
-
-.service-list li:last-of-type {
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
-  border-bottom: 1px solid #eee;
-}
-
-.service-list-item {
-  color: #444;
-  font-weight: 500;
-  font-size: 15px;
-}
-
-.service-list-item-value {
-  color: #777;
-  font-weight: 500;
-  font-size: 15px;
-}
-/**/
-.service-column-third {
-  width: 33.33%;
-    border-left: 1px solid #ddd;
-}
-
-.service-column-third .service-image-label-container {
-  padding-left: 20px;
-  padding-top: 25px;
-}
-
-.service-column-third .service-gray-label {
-  padding-left: 20px;
-}
-
-.service-column-third .service-box {
-  border-right: none;
-  border-left: none;
-  border-radius: 0;
-}
-
-.service-column-third .service-access-data-box {
-  display: none;
-}
-
-.service-column-third .service-list li {
-  border-radius: 0;
-  border-left: none;
-  border-right: none;
-}
 
 /**/
 
-.lan-device-column {
-  width: 33.33%;
-  padding-top: 20px;
-}
 
-.lan-device-list li {
-  background: #fff;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  border-top: 1px solid #eee;
-
-}
-
-.lan-device-list li:last-of-type {
-  border-bottom: 1px solid #eee;
-}
-
-.lan-device-list-main {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 15px 20px 15px 20px;
-  transition: background 0.15s ease-in;
-}
-
-.lan-device-list-main:hover {
-  background: #eee;
-  cursor: pointer;
-  transition: background 0.2s ease;
-}
-
-
-
-.lan-device-list-image-wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 40px;
-}
-
-.lan-device-list-arrow-image-container {
-  display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.lan-device-list-arrow-image {
-  width: 15px;
-  height: 5px;
-}
-
-/**/
-.lan-device-list li {
-  transition: margin 0.2s ease-in-out;
-}
-
-.lan-device-list-active-dropdown {
-  margin-bottom: 15px;
-  border-bottom: 1px solid #eee;
-  
-}
-
-/**/
-
-.lan-device-list-service-dropdown li{
-  border: none !important;
-  transition: background 0.15s ease-in;
-}
-
-.lan-device-list-service-dropdown li:hover {
-  background: #eee;
-  cursor: pointer;
-  transition: background 0.2s ease;
-}
-
-.lan-dropdown-list-item-inner {
-  padding: 12px 40px 12px 0px;
-  margin-left: 60px;
-  border: none !important;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-direction: row;
-}
-
-.lan-device-list-service-dropdown li:first-of-type .lan-dropdown-list-item-inner {
-  border-top: 1px solid #eee !important;
-}
-
-.lan-dropdown-image-wrapper {
-  border-radius: 50%;
-    border: 1px solid #ddd;
-    width: 30px;
-    height: 30px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-}
-
-.lan-dropdown-image {
-  max-width: 32px;
-  max-height: 32px;
-}
-
-.lan-dropdown-label {
-  color: #777;
-  font-weight: 500;
-  font-size: 13px;
-  margin-left: 10px;
-}
-
-.dropdown-hidden {
-  visibility: hidden;
-  max-height: 0;
-  overflow: hidden;
-  transition: all 0.4s ease;
-}
-
-.dropdown-visible {
-  visibility: visible;
-  max-height: 600px;
-  transition: all 0.7s ease-in;
-  overflow: hidden;
-}
 
 
 

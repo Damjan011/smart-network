@@ -1,10 +1,8 @@
 import React from 'react';
 import './style.css';
-import { LineChart, Line, XAxis, YAxis, CartesianGrid, ResponsiveContainer } from 'recharts';
+import { LineChart, Line, Tooltip, Brush, XAxis, YAxis, CartesianGrid, ResponsiveContainer } from 'recharts';
 import CustomTooltip from '../customTooltip';
-import Tooltip from '../../recharts/src/component/Tooltip';
-import svgToPng from './svgToPng';
-import ReactDOM from 'react-dom';
+//import Tooltip from '../../recharts/src/component/Tooltip';
 
 const newData = [
   {
@@ -136,49 +134,7 @@ const hourFormatter = (tickTimestamp) => {
   return fullHours;
 }
 
-// const exportChart = () => {
-
-//   // Output image size
-//   const WIDTH = 900;
-//   const HEIGHT = 250;
-
-//   const convertChart = async (ref) => {
-
-//       if (ref && ref.container) {
-//           let svg = ref.container.children[0];
-//           let pngData = await svgToPng(svg, WIDTH, HEIGHT);
-//           console.log('Do what you need with PNG', pngData);
-//       }
-//   };
-
-//   const chart = <LineChart  width={WIDTH} height={HEIGHT}
-//       ref={ref => convertChart(ref)} />;
-
-//   // Render chart component into helper div
-//   const helperDiv = document.createElement('tmp');
-//   ReactDOM.render(chart, helperDiv);
-// }
-const WIDTH = 125;
-  const HEIGHT = 50;
-const convertChart = async (ref) => {
-
-  if (ref && ref.container) {
-      let svg = ref.container.children[0];
-      let pngData = await svgToPng(svg, WIDTH, HEIGHT);
-      console.log('Do what you need with PNG', pngData);
-      return (
-        <div>
-          {pngData}
-        </div>
-      )
-  }
-};
-
 const BandwidthGraph = ({ active, payload, label }) => {
-  
-
-
-  
   return (
     <div id="bandwidth-usage" className="ui-box" style={{ padding: '20px', overflow: 'visible' }}>
       <div className="ui-graph-labels">
@@ -196,20 +152,20 @@ const BandwidthGraph = ({ active, payload, label }) => {
       </div>
       <ResponsiveContainer width='100%' height={180}>
         <LineChart className="hide-last-tick"
-          margin={{ 
+          margin={{
             top: 0, right: -45, left: 0, bottom: 0,
           }}
-          data={newData} 
-          ref={ref => convertChart(ref)}>
+          data={newData}>
           <CartesianGrid strokeDasharray="3 3" />
           <XAxis allowDataOverflow={true} interval={0} tickFormatter={hourFormatter} tick={{ dx: 20 }} tickLine={false} dataKey='timestamp' />
           <YAxis tick={{ dy: 0 }} tickLine={false} orientation="right" type="number" domain={[0, 8]} />
           <Tooltip position={{ y: -115 }} cursor={false} content={<CustomTooltip label={label} payload={payload} active={active} />} />
+          <Brush dataKey="rx" height={30} stroke="#8884d8" />
           <Line dataKey="rx" stroke="#6EE294" strokeWidth="4" dot={false} activeDot={false} />
           <Line dataKey="tx" stroke="#5F72FF" strokeWidth="4" dot={false} activeDot={false} />
         </LineChart>
       </ResponsiveContainer>
-      
+
     </div>
   );
 }
