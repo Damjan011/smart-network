@@ -3,7 +3,7 @@ import './style.css';
 import BandwidthGraphSnapshot from '../../graphs/bandwidthGraphSnapshot';
 
 const DeviceDisplay = ({ lanView, deviceServicesDropdown, setDeviceServicesDropdown, lanDeviceData }) => {
-  if (lanView && window.matchMedia("(max-width: 500px)")) {
+  if (lanView) {
     return (
       <div className="lan-device-column">
         <ul className="lan-device-list">

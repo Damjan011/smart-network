@@ -155,7 +155,7 @@ const RouterTraffic = () => {
   return (
     <div className="ui-top-content">
       <RouterTrafficHeader requestLanView={requestLanView} closeLanView={closeLanView} lanView={lanView} />
-      <div className="ui-router-traffic-wrapper">
+      <div className={`ui-router-traffic-wrapper ${lanView ? 'lan-mobile-view' : ''}`}>
         <TrafficDisplay lanDeviceData={lanDeviceData} trafficData={trafficData} lanView={lanView} setServiceData={setServiceData} wanTrafficData={wanTrafficData} serviceData={serviceData} serviceView={serviceView} setServiceView={setServiceView}/>
         <DeviceDisplay lanView={lanView} deviceServicesDropdown={deviceServicesDropdown} setDeviceServicesDropdown={setDeviceServicesDropdown} lanDeviceData={lanDeviceData}/>
         <ServiceDisplay serviceData={serviceData} serviceView={serviceView} lanView={lanView} setLanView={setLanView} />

@@ -2,6 +2,22 @@
   display: flex;
 }
 
+@media only screen and (max-width: 1230px) {
+  .lan-mobile-view .traffic-column {
+    width: 100% !important;
+    border-right: none;
+  }
+  .lan-mobile-view .lan-device-column {
+    display: none;
+  }
+  .lan-mobile-view .service-column-full {
+    display: none;
+  }
+  .lan-mobile-view .service-column-third {
+    display: none;
+  }
+}
+
 .traffic-column {
   width: 33.33%;
   border-right: 1px solid #ddd;
