@@ -113,7 +113,7 @@ const lanDeviceData = [
     deviceIcon: 'laptop', deviceName: 'Alice\'s Dell XPS', graphData: 'Alices DELL graph data', deviceDropdown: [
       { logo: 'netflix', service: 'Netflix', graphData: 'Netflix graph data' },
       { logo: 'dropbox', service: 'Dropbox', graphData: 'Dropbox graph data' },
-      { logo: 'netflix', service: 'Google Services', graphData: 'Google services graph data' },
+      { logo: 'netflix', service: 'Amazon Services', graphData: 'Google services graph data' },
     ]
   },
   {

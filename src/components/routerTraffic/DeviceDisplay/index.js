@@ -36,9 +36,10 @@ const DeviceDisplay = ({ lanView, deviceServicesDropdown, setDeviceServicesDropd
                     </div>
                   </div>
                 </div>
-                <ul className={`lan-device-list-service-dropdown ${deviceServicesDropdown === index ? 'dropdown-visible' : 'dropdown-hidden'}`}>
+                
                   {
                     el.deviceDropdown.map((el) => (
+                      <ul className={`lan-device-list-service-dropdown ${deviceServicesDropdown === index ? 'dropdown-visible' : 'dropdown-hidden'}`}>
                       <li>
                         <div className="lan-dropdown-list-item-inner">
                           <div className="router-traffic-list-image-label-wrapper">
@@ -54,9 +55,10 @@ const DeviceDisplay = ({ lanView, deviceServicesDropdown, setDeviceServicesDropd
                           </div>
                         </div>
                       </li>
+                      </ul>
                     ))
                   }
-                </ul>
+                
               </li>
             ))
           }
