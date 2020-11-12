@@ -85,7 +85,7 @@ const TrafficDisplay = ({ wanTrafficData, setLanDeviceData, trafficData, lanView
           {
             lanView &&
             trafficData.map((el, index) => (
-              <li  className={userDevicesDropdown === index ? 'lan-device-list-active-dropdown lan-responsive-active damjan' : 'damjan'}>
+              <li  className={userDevicesDropdown === index ? 'lan-device-list-active-dropdown lan-responsive-active' : ''}>
                 <div onClick={() => {
                   if (!responsiveCheck) {
                     setDeviceServicesDropdown(-1)
