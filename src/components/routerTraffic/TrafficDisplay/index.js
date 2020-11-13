@@ -85,7 +85,7 @@ const TrafficDisplay = ({ wanTrafficData, setLanDeviceData, trafficData, lanView
           {
             lanView &&
             trafficData.map((el, index) => (
-              <li  className={userDevicesDropdown === index ? 'lan-device-list-active-dropdown lan-responsive-active' : ''}>
+              <li style={userDevicesDropdown === index + 1 ? {borderBottom: '1px solid #eee'} : {}} className={userDevicesDropdown === index ? 'lan-device-list-active-dropdown lan-responsive-active' : ''}>
                 <div onClick={() => {
                   if (!responsiveCheck) {
                     setDeviceServicesDropdown(-1)
@@ -97,7 +97,7 @@ const TrafficDisplay = ({ wanTrafficData, setLanDeviceData, trafficData, lanView
                     }
                   }
                 }
-                } className="lan-device-list-main damjan">
+                } className="lan-device-list-main">
                   <div className="router-traffic-list-image-label-wrapper">
                     <div className="router-traffic-list-image-wrapper">
                       <img src={require('../../../assets/images/' + el.userProfile + '-profile.png')} alt={el.userName + ' profile'} className="router-traffic-list-image" />

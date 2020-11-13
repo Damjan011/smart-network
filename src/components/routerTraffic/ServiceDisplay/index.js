@@ -1,5 +1,5 @@
 import React from 'react';
-import BandwidthGraphSnapshot from '../../graphs/bandwidthGraphSnapshot';
+import ServiceGraph from '../ServiceGraph'
 import './style.css';
 
 const ServiceDisplay = ({ lanView, setLanView, serviceView, serviceData }) => {
@@ -20,7 +20,7 @@ const ServiceDisplay = ({ lanView, setLanView, serviceView, serviceData }) => {
               <p>TRAFFIC (MBIT)</p>
             </div>
             <div className="service-box">
-              <BandwidthGraphSnapshot />
+              <ServiceGraph />
             </div>
           </div>
           <div className="service-access-data-box">

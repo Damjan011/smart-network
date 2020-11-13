@@ -1,5 +1,5 @@
 import React from 'react';
-import { AreaChart, Area } from 'recharts';
+import { AreaChart, Area, XAxis, YAxis, CartesianGrid, ResponsiveContainer } from 'recharts';
 
 const newData = [
   {
@@ -125,29 +125,40 @@ const newData = [
   },
 ];
 
-const BandwidthGraphSnapshot = () => {
-  return (
-    <AreaChart
-      margin={{
-        top: 0, right: 0, left: 0, bottom: 0,
-      }}
-      data={newData} width={100} height={30}
-    >
-      <defs>
-        <linearGradient id="colorUv" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="5%" stopColor="#5F72FF" stopOpacity={0.3} />
-          <stop offset="100%" stopColor="#5F72FF" stopOpacity={0.1} />
-        </linearGradient>
-        <linearGradient id="colorPv" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="5%" stopColor="#6EE294" stopOpacity={0.6} />
-          <stop offset="100%" stopColor="#6EE294" stopOpacity={0.4} />
-        </linearGradient>
-      </defs>
-      <Area dataKey="rx" stroke="#6EE294" fillOpacity={0.5} fill="url(#colorPv)" strokeWidth="1" dot={false} activeDot={false} />
-          <Area dataKey="tx" stroke="#5F72FF" fillOpacity={0.5} fill="url(#colorUv)" strokeWidth="1" dot={false} activeDot={false} />
-    </AreaChart>
+const hourFormatter = (tickTimestamp) => {
+  let fullDate = new Date(tickTimestamp);
+  let fullHours = fullDate.toLocaleString('en-US', { hour: 'numeric', minute: 'numeric', hour12: true })
+  return fullHours;
+}
 
+const ServiceGraph = () => {
+  return (
+    <div>
+      <ResponsiveContainer width='100%' height={180}>
+        <AreaChart className="hide-last-tick"
+          data={newData}
+          margin={{
+            top: 0, right: 0, left: -50, bottom: 0,
+          }}>
+            <defs>
+    <linearGradient id="colorUv" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="5%" stopColor="#5F72FF" stopOpacity={0.3}/>
+      <stop offset="100%" stopColor="#5F72FF" stopOpacity={0.1}/>
+    </linearGradient>
+    <linearGradient id="colorPv" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="5%" stopColor="#6EE294" stopOpacity={0.6}/>
+      <stop offset="100%" stopColor="#6EE294" stopOpacity={0.4}/>
+    </linearGradient>
+  </defs>
+          <CartesianGrid strokeDasharray="3 3" />
+          <XAxis allowDataOverflow={true} interval={1} tickFormatter={hourFormatter} tick={{ dx: 20 }} tickLine={false} dataKey='timestamp' />
+          <YAxis tick={{ dy: 0 }} tickLine={false} orientation="left" type="number" domain={[0, 8]} />
+          <Area dataKey="rx" stroke="#6EE294" fillOpacity={0.5} fill="url(#colorPv)" strokeWidth="4" dot={false} activeDot={false} />
+          <Area dataKey="tx" stroke="#5F72FF" fillOpacity={0.5} fill="url(#colorUv)" strokeWidth="4" dot={false} activeDot={false} />
+        </AreaChart>
+      </ResponsiveContainer>
+    </div>
   );
 }
 
-export default BandwidthGraphSnapshot;
+export default ServiceGraph;

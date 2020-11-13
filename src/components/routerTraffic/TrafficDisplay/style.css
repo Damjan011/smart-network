@@ -108,13 +108,15 @@
   border: 1px solid #eee;
   border-radius: 10px;
   overflow: hidden;
+  transition: all 0.6s ease;
 }
 
 .lan-responsive-active .lan-device-list-main {
   padding-right: 9px;
-  transition: all 0.6s ease;
+  transition: all 0.5s ease;
 }
 
 .lan-dropdown-mobile-border {
   border-top: 1px solid #eee !important;
+  padding-right: 44px;
 }
