@@ -34,7 +34,7 @@
   border-bottom: 1px solid #eee;
 }
 
-.router-traffic-list li:hover {
+.router-traffic-item-hover:hover {
   background: #eee;
   cursor: pointer;
   transition: background 0.2s ease;
