@@ -19,7 +19,7 @@ const ServiceDisplay = ({ lanView, setLanView, serviceView, serviceData }) => {
             <div className="service-gray-label">
               <p>TRAFFIC (MBIT)</p>
             </div>
-            <div className="service-box">
+            <div className="service-box" style={{paddingBottom: '10px'}}>
               <ServiceGraph />
             </div>
           </div>
