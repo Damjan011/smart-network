@@ -54,7 +54,15 @@
 .lan-device-list-active-dropdown {
   margin-bottom: 15px;
   border-bottom: 1px solid #eee;
-  
+}
+
+.lan-device-list-service-dropdown .lan-dropdown-list-item-inner {
+  padding-right: 55px;
+}
+
+.lan-device-list-service-dropdown .router-traffic-list-image-label-wrapper {
+  min-width: 120px;
+  margin-right: 5px;
 }
 
 .lan-device-list-service-dropdown li{
@@ -62,11 +70,11 @@
   transition: background 0.15s ease-in;
 }
 
-.lan-device-list-service-dropdown li:hover {
+/* .lan-device-list-service-dropdown li:hover {
   background: #eee;
   cursor: pointer;
   transition: background 0.2s ease;
-}
+} */
 
 .lan-dropdown-list-item-inner {
   padding: 12px 40px 12px 0px;
@@ -103,6 +111,16 @@
   font-weight: 500;
   font-size: 13px;
   margin-left: 10px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 65%;
+}
+
+.lan-dropdown-label p {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 .dropdown-hidden {
