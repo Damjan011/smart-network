@@ -1,6 +1,4 @@
 import React, { useState } from 'react';
-import BandwidthGraphSnapshot from '../../components/graphs/bandwidthGraphSnapshot';
-import TrafficProgressBars from '../../components/routerTraffic/SpeedProgressBars';
 import RouterTrafficHeader from '../../components/routerTraffic/routerTrafficHeader';
 import './style.css';
 import ServiceDisplay from '../../components/routerTraffic/ServiceDisplay';
