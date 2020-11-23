@@ -1,4 +1,8 @@
-.ui-speedtest-network-main {
+.ui-isp-plans-wrapper {
+  padding: 20px;
+}
+
+.isp-plans-list-item {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -6,26 +10,87 @@
   background: #fff;
   border-radius: 10px;
   border: 1px solid #eee;
-  padding: 0 20px 0 20px;
-  height: 40px;
+  padding: 13px 20px 13px 20px;
 }
 
-.ui-speedtest-list li {
+.isp-label-info-container {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: baseline;
-  background: #fff;
-  border-radius: 10px;
-  border: 1px solid #eee;
-  padding: 6px 20px 6px 20px;
+  flex-direction: column;
+  justify-content: flex-start;
 }
 
-.ui-speedtest-network-name {
-  font-weight: 500;
+.isp-label {
+  font-weight: 600;
   font-size: 15px;
   color: #444;
 }
+
+.isp-info {
+  display: flex;
+  align-items: center;
+  margin-top: 8px;
+}
+
+.isp-download {
+  display: flex;
+  align-items: center;
+  margin-right: 8px;
+}
+
+.isp-upload {
+  display: flex;
+  align-items: center;
+  margin-right: 8px;
+}
+
+.isp-upload-image-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.isp-download-image-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.isp-upload-image {
+  width: 12px;
+  height: 12px;
+  margin-right: 4px;
+}
+
+.isp-download-image {
+  width: 12px;
+  height: 12px;
+  margin-right: 4px;
+}
+
+.isp-networks, .isp-download-value, .isp-upload-value {
+  font-weight: 600;
+  font-size: 10px;
+  color: #777;
+}
+
+.isp-networks {
+  margin-right: 8px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .ui-speedtest-network-info {
   display: flex;
@@ -169,18 +234,6 @@
   box-sizing: border-box;
   width: 100%;
   z-index: 2;
-}
-
-.ui-speedtest-green-fill {
-  height: 100%;
-    border-radius: 20px;
-    background-color: #6EE294;
-}
-
-.ui-speedtest-blue-fill {
-  height: 100%;
-    border-radius: 20px;
-    background-color: #5F72FF;
 }
 
 .ui-multi-list li {

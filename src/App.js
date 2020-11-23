@@ -13,6 +13,7 @@ import {
   Link
 } from "react-router-dom";
 import RouterTraffic from './containers/routerTraffic';
+import IspPlans from './containers/ispPlans';
 
 class App extends React.Component {
   render() {
@@ -37,10 +38,10 @@ class App extends React.Component {
                 <img src={require("./assets/images/Shape-4.png")} alt="Networks icon" />
                 <p>Networks</p>
               </NavLink>
-              <Link>
+              <NavLink activeClassName="active" to="/ispPlans">
                 <img src={require("./assets/images/Shape-5.png")} alt="ISP Plans icon" />
                 <p>ISP Plans</p>
-              </Link>
+              </NavLink>
               <Link>
                 <img src={require("./assets/images/Shape-2.png")} alt="Task manager icon" />
                 <p>Task Manger</p>
@@ -101,6 +102,9 @@ class App extends React.Component {
             </Route>
             <Route path="/routerTraffic">
               <RouterTraffic />
+            </Route>
+            <Route path="/ispPlans">
+              <IspPlans />
             </Route>
             <Route path="/">
               <Home />
