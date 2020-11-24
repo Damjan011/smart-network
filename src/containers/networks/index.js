@@ -9,7 +9,6 @@ function Networks() {
       <TopContentSearch />
       <ModalSearch />
       <NetworksTableNew />
-      
     </div>
   );
 }

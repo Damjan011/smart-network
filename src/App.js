@@ -13,7 +13,7 @@ import {
   Link
 } from "react-router-dom";
 import RouterTraffic from './containers/routerTraffic';
-import IspPlans from './containers/ispPlans';
+import IspPlans from './containers/IspPlans';
 
 class App extends React.Component {
   render() {

@@ -73,8 +73,7 @@ const NetworksTable = (props) => {
           <th>
             <div
               onClick={() => requestSort('networkName')}
-              className={getClassNamesFor('networkName')}
-            >
+              className={getClassNamesFor('networkName')}>
               <p>
                 Name
                 </p>
