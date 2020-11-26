@@ -1,8 +1,7 @@
 import React from 'react';
 import './style.css';
-import IspPlansNotificationDropdownRow from './IspPlansNotificationDropdownRow';
 
-const IspPlansCreateNew = () => (
+const ScriptLibraryCreateNew = () => (
   <div className="isp-modal-main">
     <div className="isp-modal-header">
       <div className="isp-modal-cancel-label">
@@ -71,10 +70,8 @@ const IspPlansCreateNew = () => (
           </div>
         </div>
       </div>
-
-      <IspPlansNotificationDropdownRow />
     </div>
   </div>
 )
 
-export default IspPlansCreateNew;
+export default ScriptLibraryCreateNew;

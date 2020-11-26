@@ -14,6 +14,8 @@ import {
 } from "react-router-dom";
 import RouterTraffic from './containers/routerTraffic';
 import IspPlans from './containers/IspPlans';
+import ScriptLibrary from './containers/ScriptLibrary';
+import SubscribersList from './containers/SubscribersList';
 
 class App extends React.Component {
   render() {
@@ -34,6 +36,11 @@ class App extends React.Component {
                 <img src={require("./assets/images/Shape-3.png")} alt="Subscribers icon" />
                 <p>Subscribers</p>
               </NavLink>
+
+              <NavLink activeClassName="active" to="/SubscribersList"  >
+                <img src={require("./assets/images/Shape-3.png")} alt="Subscribers icon" />
+                <p>Subscribers List</p>
+              </NavLink>
               <NavLink activeClassName="active" to="/networks" >
                 <img src={require("./assets/images/Shape-4.png")} alt="Networks icon" />
                 <p>Networks</p>
@@ -46,10 +53,10 @@ class App extends React.Component {
                 <img src={require("./assets/images/Shape-2.png")} alt="Task manager icon" />
                 <p>Task Manger</p>
               </Link>
-              <Link>
+              <NavLink activeClassName="active" to="/ScriptLibrary">
                 <img src={require("./assets/images/Shape-1.png")} alt="Script library icon" />
                 <p>Script Library</p>
-              </Link>
+              </NavLink>
               <Link>
                 <img src={require("./assets/images/Shape-6.png")} alt="Preferences icon" />
                 <p>Preferences</p>
@@ -94,6 +101,9 @@ class App extends React.Component {
             <Route path="/subscribers">
               <Subscribers />
             </Route>
+            <Route path="/SubscribersList">
+              <SubscribersList />
+            </Route>
             <Route path="/networks">
               <Networks />
             </Route>
@@ -105,6 +115,9 @@ class App extends React.Component {
             </Route>
             <Route path="/ispPlans">
               <IspPlans />
+            </Route>
+            <Route path="/ScriptLibrary">
+              <ScriptLibrary />
             </Route>
             <Route path="/">
               <Home />

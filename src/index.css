@@ -1,14 +1,28 @@
-/* @font-face {
-  font-family: 'SF Pro Text';
-  src: local('SF Pro Text'), url(./fonts/damjan.ttf) format('truetype');
-} */
-
 body {
   margin: 0;
   letter-spacing: 0.15px;
   color: #555;
   font-family: -apple-system, BlinkMacSystemFont, sans-serif;
   /* font-family: 'SF Pro Text'; */
+}
+
+::-webkit-scrollbar {
+  background-color: inherit;
+  width: 16px
+}
+
+::-webkit-scrollbar-track {
+  background-color: inherit;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #babac0;
+  border-radius: 16px;
+  border: 4px solid #fafafa
+}
+
+::-webkit-scrollbar-button {
+  display: none
 }
 
 h2, h3, h1, p {
