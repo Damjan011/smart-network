@@ -16,6 +16,8 @@ import RouterTraffic from './containers/routerTraffic';
 import IspPlans from './containers/IspPlans';
 import ScriptLibrary from './containers/ScriptLibrary';
 import SubscribersList from './containers/SubscribersList';
+import Preferences from './containers/Preferences';
+import SubscriberSingle from './containers/SubscriberSingle';
 
 class App extends React.Component {
   render() {
@@ -41,6 +43,13 @@ class App extends React.Component {
                 <img src={require("./assets/images/Shape-3.png")} alt="Subscribers icon" />
                 <p>Subscribers List</p>
               </NavLink>
+
+              <NavLink activeClassName="active" to="/SubscriberSingle"  >
+                <img src={require("./assets/images/Shape-3.png")} alt="Subscribers icon" />
+                <p>Subscribers Single</p>
+              </NavLink>
+
+
               <NavLink activeClassName="active" to="/networks" >
                 <img src={require("./assets/images/Shape-4.png")} alt="Networks icon" />
                 <p>Networks</p>
@@ -57,10 +66,10 @@ class App extends React.Component {
                 <img src={require("./assets/images/Shape-1.png")} alt="Script library icon" />
                 <p>Script Library</p>
               </NavLink>
-              <Link>
+              <NavLink activeClassName="active" to="/Preferences">
                 <img src={require("./assets/images/Shape-6.png")} alt="Preferences icon" />
                 <p>Preferences</p>
-              </Link>
+              </NavLink>
               <NavLink activeClassName="active" to="/speedtest" >
                 <img src={require("./assets/images/Shape-4.png")} alt="Networks icon" />
                 <p>Speedtest</p>
@@ -104,6 +113,9 @@ class App extends React.Component {
             <Route path="/SubscribersList">
               <SubscribersList />
             </Route>
+            <Route path="/SubscriberSingle">
+              <SubscriberSingle />
+            </Route>
             <Route path="/networks">
               <Networks />
             </Route>
@@ -118,6 +130,9 @@ class App extends React.Component {
             </Route>
             <Route path="/ScriptLibrary">
               <ScriptLibrary />
+            </Route>
+            <Route path="/Preferences">
+              <Preferences />
             </Route>
             <Route path="/">
               <Home />

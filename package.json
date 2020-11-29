@@ -5,9 +5,6 @@
   "dependencies": {
     "@babel/core": "^7.0.0",
     "@babel/plugin-syntax-dynamic-import": "^7.8.3",
-    "@nivo/bar": "^0.62.0",
-    "@nivo/line": "^0.65.1",
-    "@react-native-community/datetimepicker": "^3.0.2",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
@@ -18,19 +15,12 @@
     "google-maps-react": "^2.0.6",
     "react": "^16.13.1",
     "react-charts": "^2.0.0-beta.7",
-    "react-date-picker": "^8.0.3",
     "react-dom": "^16.13.1",
-    "react-mobile-datepicker": "^4.0.2",
     "react-modal": "^3.11.2",
-    "react-native-date-picker": "^3.2.3",
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.1",
-    "react-transition-group": "^4.4.1",
-    "react-ultra-date-picker": "^1.1.6",
     "recharts": "^1.8.5",
-    "rmc-date-picker": "^6.0.10",
-    "typescript": "^4.0.5",
-    "victory": "^35.1.1"
+    "typescript": "^4.0.5"
   },
   "scripts": {
     "start": "react-scripts start",

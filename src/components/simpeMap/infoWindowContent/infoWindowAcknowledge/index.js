@@ -2,7 +2,6 @@ import React from 'react';
 import './style.css';
 import CheckIconBlue from '../../../../assets/images/check-blue.png';
 import ArrowLeft from '../../../../assets/images/arrow-left.png';
-import MyApp from './datePicker';
 
 const InfoWindowAcknowledge = ({ onAction }) => {
   return (
@@ -89,7 +88,6 @@ const InfoWindowAcknowledge = ({ onAction }) => {
                 </div>
               </a>
             </div>
-            <MyApp/>
           </div>
         </div>
       </div>
