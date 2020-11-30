@@ -1,10 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './style.css';
 import MainHeader from '../../components/MainHeader';
 import SimpeMap from '../../components/simpeMap';
 import IspPlansEdit from '../../components/IspPlans/IspPlansEdit';
 import HeaderBackArrow from '../../components/HeaderBackArrow';
-
+import DropdownOptions from '../../components/DropdownOptions';
+import Modal from 'react-modal';
+import EditSubscriber from '../../components/EditSubscriber';
 
 const subscriberDetails = [
   { label: `CRM REF`, value: `3442312` },
@@ -17,8 +19,12 @@ const subscriberDetails = [
 ];
 
 const SubscriberSingle = () => {
+  const [ modalOpen, setModalOpen ] = useState(false);
   return (
     <div className="ui-top-content">
+      <Modal isOpen={true}>
+        <EditSubscriber />
+      </Modal>
       <MainHeader leftSide={<HeaderBackArrow labelValue='Subscribers' />} mainLabel='Ofer Tenenbaum' rightSide='joooojj' />
 
       <div className="single-subscriber-wrapper">
@@ -122,14 +128,14 @@ const SubscriberSingle = () => {
         </div>
         <div className="subscriber-details-wrapper">
           <div className="subscriber-details-header">
-            <p>SUBSCRIBER DETAILS</p>
-            <IspPlansEdit />
+            <p >SUBSCRIBER DETAILS</p>
+            {/* <DropdownOptions firstButtonText='Add Router' secondButtonText='Edit' thirdButtonText='Delete' arrowLeft={true}/> */}
           </div>
 
           <ul className="subscriber-details-list">
             {
               subscriberDetails.map((el) => (
-                <li>
+                <li onClick={<DropdownOptions />}>
                   <div className="subscriber-details-list-item">
                     <div className="subscriber-details-label">
                       <p>{el.label}</p>
