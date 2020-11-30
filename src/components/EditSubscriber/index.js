@@ -38,8 +38,11 @@ const EditSubscriber = () => {
             <div className="modal-row-label">
               <p>E-mail</p>
             </div>
-            <div className="modal-row-value">
-              <p>paul.fields@yahoo.com</p>
+            <div className="modal-row-value-edit-sub">
+              <input placeholder="ja sam placeholder"/>
+              <div className="ui-input-error">
+                <p>Input error message</p>
+              </div>
             </div>
           </div>
         </div>

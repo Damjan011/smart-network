@@ -11,6 +11,19 @@
   z-index: 4;
 }
 
+.modal-long-value .modal-row-value-edit-sub {
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.ui-input-error {
+  color: #ff3333;
+}
+
 .modal-main {
   width: 100%;
   height: 100%;
