@@ -2,7 +2,7 @@ import React from 'react';
 import './style.css';
 import TechModeDropdownRow from './TechModeDropdownRow';
 
-export default function EditSubscriber() {
+const EditSubscriber = () => {
   return (
     <div className="modal-main">
       <div className="modal-header">
@@ -82,3 +82,5 @@ export default function EditSubscriber() {
     </div>
   )
 };
+
+export default EditSubscriber;

@@ -7,6 +7,7 @@ import HeaderBackArrow from '../../components/HeaderBackArrow';
 import DropdownOptions from '../../components/DropdownOptions';
 import Modal from 'react-modal';
 import EditSubscriber from '../../components/EditSubscriber';
+import SendInviteModal from '../../components/SendInviteModal';
 
 const subscriberDetails = [
   { label: `CRM REF`, value: `3442312` },
@@ -20,9 +21,10 @@ const subscriberDetails = [
 
 const SubscriberSingle = () => {
   const [ modalOpen, setModalOpen ] = useState(false);
+  const [ sendInvite, setSendInvite ] = useState(false);
   return (
     <div className="ui-top-content">
-      <Modal isOpen={true}>
+      <Modal isOpen={false}>
         <EditSubscriber />
       </Modal>
       <MainHeader leftSide={<HeaderBackArrow labelValue='Subscribers' />} mainLabel='Ofer Tenenbaum' rightSide='joooojj' />
@@ -30,9 +32,10 @@ const SubscriberSingle = () => {
       <div className="single-subscriber-wrapper">
         <div style={{ margin: '10px' }} className="ROUTER-LIST">
 
-          <div className="subscriber-router-list-header">
+          <div onClick={() =>setSendInvite(true)} className="subscriber-router-list-header">
             <p>ROUTERS</p>
           </div>
+          <SendInviteModal sendInvite={sendInvite}/>
           <ul className="subscriber-router-list">
             <li>
               <div className="subscriber-router-list-item">
