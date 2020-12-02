@@ -8,11 +8,9 @@ const MainHeader = ({ mainLabel, leftSide, rightSide, hasSearch }) => {
         <div className="ui-main-header-side">
           {leftSide}
         </div>
-
         <div className="ui-main-header-label">
           <p>{mainLabel}</p>
         </div>
-
         <div className="ui-main-header-side">
           {rightSide}
         </div>

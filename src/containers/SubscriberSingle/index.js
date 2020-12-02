@@ -24,7 +24,7 @@ const SubscriberSingle = () => {
   const [ sendInvite, setSendInvite ] = useState(false);
   return (
     <div className="ui-top-content">
-      <Modal isOpen={true}>
+      <Modal isOpen={false}>
         <EditSubscriber />
       </Modal>
       <MainHeader leftSide={<HeaderBackArrow labelValue='Subscribers' />} mainLabel='Ofer Tenenbaum' rightSide='joooojj' />
