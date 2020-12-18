@@ -4,12 +4,11 @@ import IspPlansEdit from '../../components/IspPlans/IspPlansEdit';
 import IspPlansHeader from '../../components/IspPlans/IspPlansHeader';
 import ReactModal from 'react-modal';
 import './style.css';
+import BasicCounter from '../../components/BasicCounter';
 
 const data = [
   {},
   {},
-  // {},
-  // {},
 ];
 
 const IspPlans = () => {
@@ -64,6 +63,7 @@ const IspPlans = () => {
           }
         </ul>
       </div>
+      <BasicCounter />
     </div>
   )
 };
